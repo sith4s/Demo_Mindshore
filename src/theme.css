@@ -1,0 +1,116 @@
+/* MindShore Brand Theme Variables */
+:root {
+  /* Dark theme - primary */
+  --brand-bg: #0b0b0c;
+  --brand-fg: #f5f6f8;
+  --surface: #121316;
+  --border: #23252b;
+  --brand-primary: #3ea6ff;
+  --brand-accent: #7bd389;
+  --brand-muted: #9aa0a6;
+  
+  /* Semantic colors */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: var(--brand-primary);
+  
+  /* Interactive states */
+  --hover-bg: rgba(62, 166, 255, 0.1);
+  --focus-ring: rgba(62, 166, 255, 0.4);
+  --selected-bg: rgba(62, 166, 255, 0.15);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --brand-bg: #ffffff;
+    --brand-fg: #121212;
+    --surface: #f6f7f8;
+    --border: #e5e7eb;
+    --brand-muted: #6b7280;
+    --hover-bg: rgba(62, 166, 255, 0.08);
+    --selected-bg: rgba(62, 166, 255, 0.1);
+  }
+}
+
+/* Focus and interaction states */
+.focus-ring {
+  @apply outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-bg;
+}
+
+/* Smooth transitions for interactive elements */
+.transition-smooth {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-smooth hover:shadow-lg hover:shadow-brand-primary/20 hover:-translate-y-1;
+}
+
+/* Button variants */
+.btn-primary {
+  @apply bg-brand-primary text-white font-medium px-4 py-2 rounded-xl hover:bg-brand-primary/90 focus-ring transition-smooth;
+}
+
+.btn-secondary {
+  @apply bg-surface border border-border text-brand-fg font-medium px-4 py-2 rounded-xl hover:bg-hover-bg focus-ring transition-smooth;
+}
+
+/* Chip styles */
+.chip {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium transition-smooth;
+}
+
+.chip-primary {
+  @apply chip bg-brand-primary/20 text-brand-primary border border-brand-primary/30;
+}
+
+.chip-accent {
+  @apply chip bg-brand-accent/20 text-brand-accent border border-brand-accent/30;
+}
+
+.chip-neutral {
+  @apply chip bg-surface text-brand-muted border border-border;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  @apply fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-content {
+  @apply bg-brand-bg border border-border rounded-2xl shadow-2xl max-w-4xl max-h-[90vh] overflow-auto;
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Loading skeleton */
+.skeleton {
+  @apply bg-surface animate-pulse rounded;
+}
+
+/* Scrollbar styling */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--brand-muted);
+}
