@@ -1,0 +1,27 @@
+<svg width="400" height="250" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="url(#gradient1)"/>
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0811C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E55197;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- AI/Analytics Icons -->
+  <g transform="translate(150, 80)">
+    <!-- Brain/AI icon -->
+    <circle cx="50" cy="40" r="30" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+    <path d="M35,35 Q50,20 65,35 Q70,50 50,55 Q30,50 35,35" fill="rgba(255,255,255,0.6)"/>
+    
+    <!-- Chart/Analytics elements -->
+    <rect x="20" y="80" width="8" height="30" fill="rgba(255,255,255,0.7)"/>
+    <rect x="32" y="70" width="8" height="40" fill="rgba(255,255,255,0.8)"/>
+    <rect x="44" y="60" width="8" height="50" fill="rgba(255,255,255,0.9)"/>
+    <rect x="56" y="75" width="8" height="35" fill="rgba(255,255,255,0.7)"/>
+    <rect x="68" y="85" width="8" height="25" fill="rgba(255,255,255,0.6)"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="200" text-anchor="middle" fill="white" font-family="Barlow, Arial, sans-serif" font-size="18" font-weight="bold">AI Analytics Platform</text>
+  <text x="200" y="220" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Barlow, Arial, sans-serif" font-size="12">Machine Learning • Data Science</text>
+</svg>

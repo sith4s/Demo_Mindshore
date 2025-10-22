@@ -92,7 +92,7 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
+# dist/ - commented out for GitHub Pages
 downloads/
 eggs/
 .eggs/

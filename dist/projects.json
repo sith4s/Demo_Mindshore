@@ -1,0 +1,355 @@
+{
+  "metadata": {
+    "generated_at": "2025-10-17T17:50:00Z",
+    "source_file": "Updated Project Data",
+    "total_projects": 5,
+    "categories": [
+      "Data & AI",
+      "Business Automation"
+    ],
+    "version": "1.1.0"
+  },
+  "projects": [
+    {
+      "id": "sqs-quotation-management-1",
+      "title": "Smarter Quotation Management",
+      "client": "Leading Seafood Company",
+      "category": "Business Automation",
+      "image": "/data/images/image2.png",
+      "summary": "Automating tuna sales quotations with real-time insights and faster deal cycles",
+      "problem": [
+        "Manual quotation processes creating delays and inefficiencies",
+        "Limited visibility into quote status and performance metrics",
+        "Slow approval workflows impacting deal closure rates"
+      ],
+      "approach": [
+        "Built digital platform automating quotation lifecycle from draft to approval",
+        "Developed interactive dashboard with real-time sales performance metrics",
+        "Implemented automated alerts for pending approvals and expiring quotes"
+      ],
+      "outcomes": [
+        "↑45% faster quote turnaround time",
+        "↑35% improvement in conversion rates",
+        "↓60% reduction in manual workload"
+      ],
+      "techStack": [
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Power BI",
+        "Azure Functions"
+      ],
+      "tags": [
+        "sales-automation",
+        "quotation-management",
+        "real-time-analytics",
+        "workflow-optimization"
+      ],
+      "images": [
+        {
+          "src": "/data/images/image2.png",
+          "alt": "SQS Dashboard Overview"
+        }
+      ],
+      "date": "2024-10-01",
+      "kpis": [
+        {
+          "label": "Response Time",
+          "value": "↑45%",
+          "description": "Faster quote generation and approval cycles"
+        },
+        {
+          "label": "Conversion Rate",
+          "value": "↑35%",
+          "description": "Higher quote-to-deal conversion through better insights"
+        }
+      ],
+      "detailedDescription": "SQS Project – Streamlining Tuna Sales Quotation Management\n\nA digital platform designed to transform how seafood companies manage their sales quotations. The system automates the entire process — from draft to approval — offering real-time visibility, faster decision-making, and improved accuracy.\n\nAn interactive dashboard gives sales teams a clear picture of performance through key metrics such as:\n• Quotes pending approval and those expiring soon (today / this week)\n• Pricing insights by fish type and size (e.g., Skipjack 3, Yellowfin 6)\n• Approved, expired, and draft quotes in the last month\n• Quote volume and conversion rate trends\n• Average response time and quote value\n• Rejection and pending quote rates\n• Overall closure efficiency\n\nBy combining automation with intuitive data visualization, the platform empowers commercial teams to act faster, reduce manual workload, and increase conversion rates.\n\nImpact: more efficient workflows, faster approvals, and smarter pricing decisions backed by real-time data."
+    },
+    {
+      "id": "aso-app-store-optimization-2",
+      "title": "ASO Project – AI for Smarter App Store Optimization",
+      "client": "Media & Entertainment Company",
+      "category": "Data & AI",
+      "image": "/data/images/image7.png",
+      "summary": "Boosting mobile app visibility with intelligent keyword generation and real-time performance tracking",
+      "problem": [
+        "ASO Project – Intelligent Optimization for App Growth",
+        "A digital solution designed for a global mobile marketing company to enhance App Store Optimization (ASO) strategies.",
+        "The platform leverages AI to automatically generate and prioritize keywords, helping mobile apps achieve higher rankings and visibility across Apple and Google stores.",
+        "It enables data-driven decisions that improve user acquisition efficiency and boost organic growth."
+      ],
+      "approach": [
+        "An interactive dashboard consolidates app performance data and key ASO metrics in real time, including:",
+        "Total downloads and conversion rate",
+        "Average user rating",
+        "Error tracking and apps flagged as at risk",
+        "Total impressions by app and store",
+        "Keyword performance and ranking evolution",
+        "Through AI-driven keyword generation and real-time KPI monitoring, marketing teams can optimize campaigns continuously and focus on high-impact actions."
+      ],
+      "outcomes": [
+        "By automating keyword discovery and performance analysis, the platform reduces manual work, speeds up optimization cycles, and enhances visibility across app stores.",
+        "The result: more efficient ASO strategies, improved conversion rates, and sustainable app growth powered by intelligent automation."
+      ],
+      "techStack": [
+        "Python",
+        "TensorFlow",
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Google Cloud"
+      ],
+      "tags": [
+        "aso",
+        "app-store-optimization",
+        "ai",
+        "mobile-marketing",
+        "keyword-generation"
+      ],
+      "images": [
+        {
+          "src": "/data/images/image7.png",
+          "alt": "ASO Dashboard"
+        },
+        {
+          "src": "/data/images/image1.png",
+          "alt": "Keyword Performance"
+        },
+        {
+          "src": "/data/images/image10.png",
+          "alt": "App Analytics"
+        }
+      ],
+      "date": "2024-09-15",
+      "kpis": [
+        {
+          "label": "App Visibility",
+          "value": "↑60%",
+          "description": "Improved rankings across app stores"
+        },
+        {
+          "label": "Organic Downloads",
+          "value": "↑45%",
+          "description": "Growth in organic user acquisition"
+        },
+        {
+          "label": "Time Saved",
+          "value": "↓70%",
+          "description": "Reduction in manual keyword research"
+        }
+      ]
+    },
+    {
+      "id": "ai-chatbot-hospitality-3",
+      "title": "AI Chatbot for Boutique Hospitality",
+      "client": "Boutique Hotel",
+      "category": "AI & Automation",
+      "image": "/data/images/image4.png",
+      "summary": "Transforming guest communication in the Riviera Maya with a smart, multilingual digital concierge",
+      "problem": [
+        "Conversational AI for Boutique Hospitality",
+        "A proof-of-concept project developed for a boutique hotel group in the Riviera Maya.",
+        "The goal was to explore how conversational AI can enhance guest engagement, streamline communication, and support personalized booking experiences in the luxury hospitality segment.",
+        "The initiative focused on creating a natural, human-like assistant to provide guests with fast and tailored responses — anytime, anywhere."
+      ],
+      "approach": [
+        "The AI-powered chatbot integrates with hotel management systems to manage real-time guest interactions, including:",
+        "Room availability and booking assistance",
+        "Check-in / check-out support",
+        "Local recommendations and experiences",
+        "Concierge and special requests",
+        "Built as a proof of concept, the chatbot uses AI-driven natural language processing and multilingual support to deliver seamless communication across web, mobile, and messaging channels."
+      ],
+      "outcomes": [
+        "The solution demonstrated how conversational technology can reduce response times, automate repetitive tasks, and improve guest satisfaction.",
+        "It paved the way for 24/7 digital concierge services, helping boutique hotels offer a more connected, personalized, and efficient guest experience."
+      ],
+      "techStack": [
+        "Python",
+        "OpenAI GPT",
+        "React",
+        "Node.js",
+        "WebSockets",
+        "Dialogflow"
+      ],
+      "tags": [
+        "ai-chatbot",
+        "hospitality",
+        "conversational-ai",
+        "multilingual",
+        "customer-service"
+      ],
+      "images": [
+        {
+          "src": "/data/images/image4.png",
+          "alt": "AI Chatbot Interface"
+        }
+      ],
+      "date": "2024-08-20",
+      "kpis": [
+        {
+          "label": "Response Time",
+          "value": "↓85%",
+          "description": "Faster guest query resolution"
+        },
+        {
+          "label": "Guest Satisfaction",
+          "value": "↑40%",
+          "description": "Improved communication experience"
+        },
+        {
+          "label": "Automation",
+          "value": "70%",
+          "description": "Repetitive tasks handled by AI"
+        }
+      ]
+    },
+    {
+      "id": "ai-chatbot-university-4",
+      "title": "AI Chatbot for University Campuses",
+      "client": "University",
+      "category": "AI & Automation",
+      "image": "/data/images/image6.png",
+      "summary": "Improving student support and engagement with a smart conversational assistant",
+      "problem": [
+        "Conversational AI for Higher Education",
+        "A proof-of-concept initiative exploring how conversational AI can simplify student interactions on university campuses.",
+        "The project aimed to enhance accessibility to information, automate administrative inquiries, and improve the overall student experience through instant, human-like communication.",
+        "The focus was on supporting both prospective and current students with timely, accurate responses across multiple channels."
+      ],
+      "approach": [
+        "The AI-driven campus assistant was designed to handle common student and faculty inquiries, including:",
+        "Admission and enrollment information",
+        "Course schedules and exam dates",
+        "Campus navigation and facilities",
+        "Administrative procedures and deadlines",
+        "General FAQs and contact routing",
+        "Using natural language understanding and multilingual support, the chatbot delivers relevant answers in real time — accessible via web and mobile platforms, fully integrated with existing university systems."
+      ],
+      "outcomes": [
+        "The project showcased how AI can reduce administrative workload and improve communication efficiency across departments.",
+        "It laid the foundation for 24/7 digital student support, enabling universities to provide faster, more consistent, and more personalized experiences at scale."
+      ],
+      "techStack": [
+        "Python",
+        "OpenAI GPT",
+        "React",
+        "Node.js",
+        "WebSockets",
+        "Rasa"
+      ],
+      "tags": [
+        "ai-chatbot",
+        "education",
+        "student-support",
+        "conversational-ai",
+        "campus-assistant"
+      ],
+      "images": [
+        {
+          "src": "/data/images/image6.png",
+          "alt": "University Campus Chatbot"
+        }
+      ],
+      "date": "2024-09-15",
+      "kpis": [
+        {
+          "label": "Response Time",
+          "value": "↓75%",
+          "description": "Faster student query resolution"
+        },
+        {
+          "label": "Admin Workload",
+          "value": "↓50%",
+          "description": "Reduced repetitive inquiries"
+        },
+        {
+          "label": "Student Satisfaction",
+          "value": "↑45%",
+          "description": "Improved support experience"
+        }
+      ]
+    },
+    {
+      "id": "grafana-monitoring-platform-5",
+      "title": "Grafana-Based Monitoring Platform",
+      "client": "Internal Infrastructure",
+      "category": "DevOps & Infrastructure",
+      "image": "/data/images/image5.png",
+      "summary": "Centralized visibility, proactive alerting, and complete observability across infrastructure",
+      "problem": [
+        "Building Complete Infrastructure Observability",
+        "A comprehensive monitoring initiative designed to establish end-to-end visibility across development and production environments.",
+        "The goal was to create a unified observability platform that could track system performance, application health, and security metrics in real time.",
+        "The focus was on proactive monitoring, automated alerting, and seamless integration with existing DevOps workflows."
+      ],
+      "approach": [
+        "A Grafana-based observability platform integrating best-in-class open-source tools:",
+        "Prometheus for metrics collection and real-time performance tracking",
+        "Mimir for scalable, long-term metric storage",
+        "Loki for log aggregation and correlation",
+        "Alertmanager for orchestration of automated notifications",
+        "Metrics were gathered across DEV and PROD from multiple layers — system resources (Node Exporter), databases (PostgreSQL Exporter), applications (Node.js custom metrics, PM2), and security tools (Fail2Ban, CSF).",
+        "Dynamic dashboards provided unified insights into infrastructure, application health, and database performance.",
+        "The platform also featured:",
+        "Slack-integrated alerting",
+        "Threshold-based monitoring (CPU, memory, disk)",
+        "Integrated performance testing with k6",
+        "Security via NGINX reverse proxy, SSL, credential rotation, and IP whitelisting."
+      ],
+      "outcomes": [
+        "The new observability layer delivered end-to-end visibility, enhanced operational resilience, and faster incident response.",
+        "It reduced downtime, simplified troubleshooting, and established a scalable foundation for future monitoring and DevOps automation initiatives."
+      ],
+      "techStack": [
+        "Grafana",
+        "Prometheus",
+        "Mimir",
+        "Loki",
+        "Alertmanager",
+        "Node Exporter",
+        "PostgreSQL Exporter",
+        "k6",
+        "NGINX",
+        "Docker"
+      ],
+      "tags": [
+        "monitoring",
+        "observability",
+        "devops",
+        "grafana",
+        "prometheus",
+        "infrastructure"
+      ],
+      "images": [
+        {
+          "src": "/data/images/image5.png",
+          "alt": "Grafana Dashboard"
+        },
+        {
+          "src": "/data/images/image8.png",
+          "alt": "Monitoring Metrics"
+        }
+      ],
+      "date": "2024-11-01",
+      "kpis": [
+        {
+          "label": "Visibility",
+          "value": "100%",
+          "description": "Complete infrastructure coverage"
+        },
+        {
+          "label": "Response Time",
+          "value": "↓60%",
+          "description": "Faster incident detection"
+        },
+        {
+          "label": "Downtime",
+          "value": "↓70%",
+          "description": "Reduced system outages"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "metadata": {
+    "generated_at": "2025-10-17T17:50:00Z",
+    "source_file": "Updated Project Data",
+    "total_projects": 5,
+    "categories": ["Data & AI", "Business Automation"],
+    "version": "1.1.0"
+  },
+  "projects": [
+    {
+      "id": "sqs-quotation-management-1",
+      "title": "Smarter Quotation Management",
+      "client": "Leading Seafood Company",
+      "category": "Business Automation",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&auto=format&fit=crop&q=80",
+      "summary": "Automating tuna sales quotations with real-time insights and faster deal cycles",
+      "problem": [
+        "Manual quotation processes creating delays and inefficiencies",
+        "Limited visibility into quote status and performance metrics",
+        "Slow approval workflows impacting deal closure rates"
+      ],
+      "approach": [
+        "Built digital platform automating quotation lifecycle from draft to approval",
+        "Developed interactive dashboard with real-time sales performance metrics",
+        "Implemented automated alerts for pending approvals and expiring quotes"
+      ],
+      "outcomes": [
+        "↑45% faster quote turnaround time",
+        "↑35% improvement in conversion rates",
+        "↓60% reduction in manual workload"
+      ],
+      "techStack": ["React", "Node.js", "PostgreSQL", "Power BI", "Azure Functions"],
+      "tags": ["sales-automation", "quotation-management", "real-time-analytics", "workflow-optimization"],
+      "images": [
+        {
+          "src": "/projects/sqs-dashboard.png",
+          "alt": "SQS dashboard showing quotation metrics and insights"
+        }
+      ],
+      "date": "2024-10-01",
+      "kpis": [
+        {
+          "label": "Response Time",
+          "value": "↑45%",
+          "description": "Faster quote generation and approval cycles"
+        },
+        {
+          "label": "Conversion Rate",
+          "value": "↑35%",
+          "description": "Higher quote-to-deal conversion through better insights"
+        }
+      ],
+      "detailedDescription": "SQS Project – Streamlining Tuna Sales Quotation Management\n\nA digital platform designed to transform how seafood companies manage their sales quotations. The system automates the entire process — from draft to approval — offering real-time visibility, faster decision-making, and improved accuracy.\n\nAn interactive dashboard gives sales teams a clear picture of performance through key metrics such as:\n• Quotes pending approval and those expiring soon (today / this week)\n• Pricing insights by fish type and size (e.g., Skipjack 3, Yellowfin 6)\n• Approved, expired, and draft quotes in the last month\n• Quote volume and conversion rate trends\n• Average response time and quote value\n• Rejection and pending quote rates\n• Overall closure efficiency\n\nBy combining automation with intuitive data visualization, the platform empowers commercial teams to act faster, reduce manual workload, and increase conversion rates.\n\nImpact: more efficient workflows, faster approvals, and smarter pricing decisions backed by real-time data."
+    },
+    {
+      "id": "customer-analytics-platform-2",
+      "title": "Customer Analytics Platform",
+      "client": "Global retail corporation",
+      "category": "Data & AI",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&auto=format&fit=crop&q=80",
+      "summary": "Comprehensive customer intelligence platform providing 360-degree view of customer behavior and personalized marketing insights.",
+      "problem": [
+        "Fragmented customer data across multiple systems and touchpoints",
+        "Limited ability to personalize marketing campaigns at scale",
+        "Inability to predict customer churn and lifetime value accurately"
+      ],
+      "approach": [
+        "Built unified customer data platform consolidating online and offline interactions",
+        "Developed machine learning models for customer segmentation and churn prediction",
+        "Implemented real-time recommendation engine for personalized experiences"
+      ],
+      "outcomes": [
+        "↑25% increase in customer engagement rates",
+        "↓40% reduction in customer acquisition costs",
+        "↑35% improvement in marketing campaign effectiveness"
+      ],
+      "techStack": ["Azure Synapse", "Databricks", "Power BI", "Azure ML", "Cosmos DB"],
+      "tags": ["customer-analytics", "personalization", "churn-prediction", "real-time"],
+      "images": [
+        {
+          "src": "/projects/customer-analytics-overview.png",
+          "alt": "Customer analytics dashboard showing segmentation and behavior insights"
+        }
+      ],
+      "date": "2024-09-20",
+      "kpis": [
+        {
+          "label": "Engagement Rate",
+          "value": "↑25%",
+          "description": "Higher customer engagement through personalized experiences"
+        },
+        {
+          "label": "Campaign ROI",
+          "value": "↑35%",
+          "description": "Improved marketing effectiveness through targeted campaigns"
+        }
+      ]
+    },
+    {
+      "id": "hr-analytics-suite-3",
+      "title": "HR Analytics Suite",
+      "client": "International consulting firm",
+      "category": "Data & AI",
+      "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=450&auto=format&fit=crop&q=80",
+      "summary": "Advanced people analytics platform enabling data-driven HR decisions and employee experience optimization.",
+      "problem": [
+        "High employee turnover rates without clear understanding of root causes",
+        "Manual performance review processes lacking objective insights",
+        "Limited visibility into team productivity and collaboration patterns"
+      ],
+      "approach": [
+        "Developed predictive models for employee retention and performance forecasting",
+        "Created automated sentiment analysis of employee feedback and surveys",
+        "Built comprehensive HR dashboards with real-time workforce metrics"
+      ],
+      "outcomes": [
+        "↓50% reduction in unexpected employee turnover",
+        "↑40% improvement in employee satisfaction scores",
+        "↓70% reduction in time spent on manual HR reporting"
+      ],
+      "techStack": ["Azure Cognitive Services", "Power BI", "Python", "Azure SQL", "Teams API"],
+      "tags": ["hr-analytics", "employee-retention", "sentiment-analysis", "workforce-planning"],
+      "images": [
+        {
+          "src": "/projects/hr-analytics-dashboard.png",
+          "alt": "HR analytics dashboard displaying employee metrics and retention insights"
+        }
+      ],
+      "date": "2024-07-10",
+      "kpis": [
+        {
+          "label": "Turnover Reduction",
+          "value": "↓50%",
+          "description": "Significant decrease in unplanned employee departures"
+        },
+        {
+          "label": "Satisfaction Score",
+          "value": "↑40%",
+          "description": "Enhanced employee satisfaction through data-driven insights"
+        }
+      ]
+    },
+    {
+      "id": "supply-chain-intelligence-4",
+      "title": "Supply Chain Intelligence",
+      "client": "Global manufacturing company",
+      "category": "Data & AI",
+      "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=450&auto=format&fit=crop&q=80",
+      "summary": "End-to-end supply chain optimization platform delivering real-time visibility and predictive insights for operational excellence.",
+      "problem": [
+        "Limited visibility into supplier performance and delivery risks",
+        "Reactive approach to supply chain disruptions causing costly delays",
+        "Manual tracking processes unable to scale with business growth"
+      ],
+      "approach": [
+        "Implemented IoT sensors and real-time data streaming from supplier networks",
+        "Developed machine learning models for risk assessment and demand planning",
+        "Created automated alert system for proactive supply chain management"
+      ],
+      "outcomes": [
+        "↑60% improvement in on-time delivery rates",
+        "↓35% reduction in supply chain costs",
+        "↓80% decrease in manual tracking effort"
+      ],
+      "techStack": ["Azure IoT Hub", "Stream Analytics", "Power BI", "Azure ML", "Event Hubs"],
+      "tags": ["supply-chain", "iot", "predictive-analytics", "risk-management"],
+      "images": [
+        {
+          "src": "/projects/supply-chain-monitoring.png",
+          "alt": "Real-time supply chain monitoring dashboard with risk indicators"
+        }
+      ],
+      "date": "2024-06-05",
+      "kpis": [
+        {
+          "label": "On-time Delivery",
+          "value": "↑60%",
+          "description": "Dramatic improvement in delivery performance"
+        },
+        {
+          "label": "Cost Savings",
+          "value": "↓35%",
+          "description": "Optimized supply chain operations reducing overall costs"
+        }
+      ]
+    },
+    {
+      "id": "financial-risk-monitor-5",
+      "title": "Financial Risk Monitor",
+      "client": "European commercial bank",
+      "category": "Data & AI",
+      "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=450&auto=format&fit=crop&q=80",
+      "summary": "Real-time financial risk assessment platform providing automated compliance monitoring and predictive risk analytics.",
+      "problem": [
+        "Manual risk assessment processes creating regulatory compliance challenges",
+        "Limited real-time visibility into portfolio risk exposure",
+        "Reactive approach to risk management increasing potential losses"
+      ],
+      "approach": [
+        "Built automated risk scoring models using machine learning algorithms",
+        "Implemented real-time monitoring of regulatory compliance metrics",
+        "Developed predictive analytics for early risk detection and mitigation"
+      ],
+      "outcomes": [
+        "↓65% reduction in compliance violations",
+        "↑50% improvement in risk detection speed",
+        "↓45% decrease in operational risk exposure"
+      ],
+      "techStack": ["Azure Synapse", "Python", "Power BI", "Azure ML", "Azure Security"],
+      "tags": ["financial-risk", "compliance", "real-time-monitoring", "regulatory"],
+      "images": [
+        {
+          "src": "/projects/risk-monitoring-console.png",
+          "alt": "Financial risk monitoring console with real-time compliance metrics"
+        }
+      ],
+      "date": "2024-05-18",
+      "kpis": [
+        {
+          "label": "Compliance Rate",
+          "value": "↑65%",
+          "description": "Significant reduction in regulatory violations"
+        },
+        {
+          "label": "Detection Speed",
+          "value": "↑50%",
+          "description": "Faster identification of potential risk factors"
+        }
+      ]
+    }
+  ]
+}
