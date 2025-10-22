@@ -8,8 +8,7 @@ interface TagProps extends BaseComponentProps {
 }
 
 /**
- * Reusable Tag Component
- * Used for categories, tech stack, and other metadata display
+ * Reusable Tag Component - MindShore Brand Spec
  */
 export default function Tag({ 
   variant = 'neutral', 
@@ -18,15 +17,46 @@ export default function Tag({
   onClick,
   selected = false 
 }: TagProps) {
-  const baseClasses = 'inline-flex items-center px-3 py-1 rounded-full text-sm font-medium transition-smooth cursor-pointer focus-ring';
   
-  const variantClasses = {
-    primary: `bg-brand-primary/20 text-brand-primary border border-brand-primary/30 ${selected ? 'bg-brand-primary text-white' : 'hover:bg-brand-primary/30'}`,
-    accent: `bg-brand-accent/20 text-brand-accent border border-brand-accent/30 ${selected ? 'bg-brand-accent text-white' : 'hover:bg-brand-accent/30'}`,
-    neutral: `bg-surface text-brand-muted border border-border ${selected ? 'bg-brand-primary text-white border-brand-primary' : 'hover:bg-hover-bg'}`,
-    success: `bg-green-500/20 text-green-400 border border-green-500/30 ${selected ? 'bg-green-500 text-white' : 'hover:bg-green-500/30'}`,
-    warning: `bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 ${selected ? 'bg-yellow-500 text-white' : 'hover:bg-yellow-500/30'}`,
-    error: `bg-red-500/20 text-red-400 border border-red-500/30 ${selected ? 'bg-red-500 text-white' : 'hover:bg-red-500/30'}`
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'primary':
+        return {
+          backgroundColor: selected ? 'var(--ms-orange)' : 'rgba(240, 129, 28, 0.1)',
+          color: selected ? 'var(--ms-white)' : 'var(--ms-orange)',
+          border: `1px solid ${selected ? 'var(--ms-orange)' : 'rgba(240, 129, 28, 0.3)'}`
+        };
+      case 'accent':
+        return {
+          backgroundColor: selected ? 'var(--ms-magenta)' : 'rgba(229, 81, 151, 0.1)',
+          color: selected ? 'var(--ms-white)' : 'var(--ms-magenta)',
+          border: `1px solid ${selected ? 'var(--ms-magenta)' : 'rgba(229, 81, 151, 0.3)'}`
+        };
+      case 'success':
+        return {
+          backgroundColor: selected ? 'var(--ms-cyan)' : 'rgba(85, 189, 191, 0.1)',
+          color: selected ? 'var(--ms-white)' : 'var(--ms-cyan)',
+          border: `1px solid ${selected ? 'var(--ms-cyan)' : 'rgba(85, 189, 191, 0.3)'}`
+        };
+      case 'warning':
+        return {
+          backgroundColor: selected ? 'var(--ms-yellow)' : 'rgba(253, 195, 13, 0.1)',
+          color: selected ? 'var(--ms-blue)' : 'var(--ms-yellow)',
+          border: `1px solid ${selected ? 'var(--ms-yellow)' : 'rgba(253, 195, 13, 0.3)'}`
+        };
+      case 'error':
+        return {
+          backgroundColor: selected ? '#ef4444' : 'rgba(239, 68, 68, 0.1)',
+          color: selected ? 'var(--ms-white)' : '#ef4444',
+          border: `1px solid ${selected ? '#ef4444' : 'rgba(239, 68, 68, 0.3)'}`
+        };
+      default: // neutral
+        return {
+          backgroundColor: selected ? 'var(--ms-blue)' : 'var(--ms-overlay-light)',
+          color: selected ? 'var(--ms-white)' : 'var(--ms-blue)',
+          border: `1px solid ${selected ? 'var(--ms-blue)' : 'var(--ms-border)'}`
+        };
+    }
   };
 
   const handleClick = () => {
@@ -42,12 +72,26 @@ export default function Tag({
 
   return (
     <span
-      className={`${baseClasses} ${variantClasses[variant]} ${className}`}
+      className={`inline-flex items-center px-3 py-1 text-sm font-medium cursor-pointer focus:outline-none ${className}`}
+      style={{
+        ...getVariantStyles(),
+        borderRadius: 'var(--ms-radius-sm)',
+        fontFamily: 'var(--ms-font-body)',
+        fontSize: 'var(--ms-fs-sm)',
+        transition: 'all 0.3s var(--ms-ease)',
+        outline: 'none'
+      }}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
       tabIndex={onClick ? 0 : undefined}
       role={onClick ? 'button' : undefined}
       aria-pressed={onClick && selected ? selected : undefined}
+      onFocus={(e) => {
+        e.currentTarget.style.boxShadow = `0 0 0 2px var(--ms-orange)`;
+      }}
+      onBlur={(e) => {
+        e.currentTarget.style.boxShadow = 'none';
+      }}
     >
       {children}
     </span>

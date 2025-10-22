@@ -1,0 +1,26 @@
+MindShore – Brand Elements for Web Design & CSS Implementation
+
+Typography
+
+Primary Font: Berthold Akzidenz Grotesk Extended• Usage: Logotype and taglines• Weights: Medium Extended, Extended, Light Extended• Color: Corporate Blue (#232856)Secondary Font: Barlow• Usage: Titles, subtitles, body text, and all general content• Titles: Barlow Light or Bold in Orange (#F0811C)• Subtitles: Barlow Bold in Blue (#232856)• Body Text: Barlow Regular in Blue (#232856)• Notes: Maintain consistent line spacing above body size, never below;   organize typography hierarchically for clarity.
+
+Color Palette
+
+Primary Colors:1. Orange – HEX #F0811C | RGB (255,130,8) | CMYK (0,58,93,0) | Pantone C151   • Use for backgrounds, headlines, and highlights.2. Magenta – HEX #E55197 | RGB (255,70,172) | CMYK (3,80,0,0) | Pantone C232   • Use sparingly for emphasis or key visual accents.3. Blue – HEX #232856 | RGB (0,0,102) | CMYK (100,94,32,30) | Pantone C281   • Use for body text, subtitles, and supporting typography.Secondary Colors:1. Yellow – HEX #FDC30D | RGB (255,197,5) | Pantone C1162. Dark Gray – HEX #485257 | RGB (72,81,86) | Pantone C5323. Cyan – HEX #55BDBF | RGB (0,223,208) | Pantone C32554. Light Gray – HEX #AFBCC4 | RGB (176,189,197) | Pantone C536Guidelines:• White provides balance with strong primary colors.• Gradients may be used to create depth or highlight data visualization.• Avoid using primary logo colors on dark or highly saturated backgrounds.
+
+Logo Usage
+
+• Maintain white or light backgrounds for the full-color logo.• Use monocolor or white logo on dark or photographic backgrounds.• Minimum Sizes:  – With Slogan: 50mm / 280px  – Recommended: 40mm / 220px  – Minimum: 25mm / 140px  – App Icon: 6mm / 35px• Respect minimum white space and scaling proportions.
+
+Photography Style
+
+• Main imagery: Aspirational, human, warm, and authentic.• Color tones: Incorporate corporate orange and magenta hues, balanced with blue.• Secondary images: Use gradient overlays with the corporate color palette.
+
+Iconography & Graphic Elements
+
+Icons:• Minimalistic, clear, and concept-driven.• Use corporate colors only (no additional shades).Keyline:• Derived from the logo, used as a graphic separator or highlight.• Always use in corporate colors.
+
+CSS Implementation Summary
+
+:root {  --color-orange: #F0811C;  --color-magenta: #E55197;  --color-blue: #232856;  --color-yellow: #FDC30D;  --color-gray-dark: #485257;  --color-cyan: #55BDBF;  --color-gray-light: #AFBCC4;  --font-primary: 'Berthold Akzidenz Grotesk Extended', sans-serif;  --font-secondary: 'Barlow', sans-serif;}h1, h2, h3 {  font-family: var(--font-secondary);  color: var(--color-orange);}p, li, span {  font-family: var(--font-secondary);  color: var(--color-blue);}a {  color: var(--color-magenta);  text-decoration: none;}a:hover {  color: var(--color-orange);}
+

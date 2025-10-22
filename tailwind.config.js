@@ -14,11 +14,21 @@ export default {
           accent: 'var(--brand-accent)',
           muted: 'var(--brand-muted)',
         },
+        // MindShore Official Colors
+        'mindshore-orange': '#F0811C',
+        'mindshore-magenta': '#E55197',
+        'mindshore-blue': '#232856',
+        'mindshore-yellow': '#FDC30D',
+        'mindshore-gray-dark': '#485257',
+        'mindshore-cyan': '#55BDBF',
+        'mindshore-gray-light': '#AFBCC4',
         surface: 'var(--surface)',
         border: 'var(--border)',
       },
       fontFamily: {
-        sans: ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Inter', 'Helvetica', 'Arial', 'sans-serif'],
+        sans: ['Barlow', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Inter', 'Helvetica', 'Arial', 'sans-serif'],
+        heading: ['Barlow', 'system-ui', 'sans-serif'],
+        body: ['Barlow', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

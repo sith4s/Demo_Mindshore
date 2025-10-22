@@ -29,7 +29,7 @@ export default function KpiChip({
         ? 'bg-green-500/20 text-green-400 border-green-500/30'
         : 'bg-red-500/20 text-red-400 border-red-500/30';
     }
-    return 'bg-brand-primary/20 text-brand-primary border-brand-primary/30';
+    return 'bg-orange-100 text-orange-700 border-orange-200';
   };
 
   const chipClasses = `

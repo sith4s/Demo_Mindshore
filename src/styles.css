@@ -3,12 +3,17 @@
 @import 'tailwindcss/utilities';
 @import './theme.css';
 
-/* Global base styles */
+/* Global base styles with MindShore colors */
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  background-color: var(--ms-white);
+  color: var(--ms-blue);
+  font-family: var(--ms-font-body);
+  font-size: var(--ms-fs-base);
+  line-height: var(--ms-lh-normal);
   font-feature-settings: 'cv11', 'cv03', 'cv04', 'cv09';
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -21,7 +26,7 @@ body {
 }
 
 *:focus-visible {
-  outline: 2px solid var(--brand-primary);
+  outline: 2px solid var(--ms-orange);
   outline-offset: 2px;
 }
 
@@ -38,8 +43,8 @@ img {
 
 /* Custom selection color */
 ::selection {
-  background-color: var(--brand-primary);
-  color: white;
+  background-color: var(--ms-orange);
+  color: var(--ms-white);
 }
 
 /* Reduce motion for accessibility */
