@@ -15,7 +15,7 @@
       "title": "Smarter Quotation Management",
       "client": "Leading Seafood Company",
       "category": "Business Automation",
-      "image": "/data/images/image2.png",
+      "image": "/Demo_Mindshore/data/images/image2.png",
       "summary": "Automating tuna sales quotations with real-time insights and faster deal cycles",
       "problem": [
         "Manual quotation processes creating delays and inefficiencies",
@@ -47,7 +47,7 @@
       ],
       "images": [
         {
-          "src": "/data/images/image2.png",
+          "src": "/Demo_Mindshore/data/images/image2.png",
           "alt": "SQS Dashboard Overview"
         }
       ],
@@ -71,7 +71,7 @@
       "title": "ASO Project – AI for Smarter App Store Optimization",
       "client": "Media & Entertainment Company",
       "category": "Data & AI",
-      "image": "/data/images/image7.png",
+      "image": "/Demo_Mindshore/data/images/image7.png",
       "summary": "Boosting mobile app visibility with intelligent keyword generation and real-time performance tracking",
       "problem": [
         "ASO Project – Intelligent Optimization for App Growth",
@@ -109,15 +109,15 @@
       ],
       "images": [
         {
-          "src": "/data/images/image7.png",
+          "src": "/Demo_Mindshore/data/images/image7.png",
           "alt": "ASO Dashboard"
         },
         {
-          "src": "/data/images/image1.png",
+          "src": "/Demo_Mindshore/data/images/image1.png",
           "alt": "Keyword Performance"
         },
         {
-          "src": "/data/images/image10.png",
+          "src": "/Demo_Mindshore/data/images/image10.png",
           "alt": "App Analytics"
         }
       ],
@@ -145,7 +145,7 @@
       "title": "AI Chatbot for Boutique Hospitality",
       "client": "Boutique Hotel",
       "category": "AI & Automation",
-      "image": "/data/images/image4.png",
+      "image": "/Demo_Mindshore/data/images/image4.png",
       "summary": "Transforming guest communication in the Riviera Maya with a smart, multilingual digital concierge",
       "problem": [
         "Conversational AI for Boutique Hospitality",
@@ -182,7 +182,7 @@
       ],
       "images": [
         {
-          "src": "/data/images/image4.png",
+          "src": "/Demo_Mindshore/data/images/image4.png",
           "alt": "AI Chatbot Interface"
         }
       ],
@@ -210,7 +210,7 @@
       "title": "AI Chatbot for University Campuses",
       "client": "University",
       "category": "AI & Automation",
-      "image": "/data/images/image6.png",
+      "image": "/Demo_Mindshore/data/images/image6.png",
       "summary": "Improving student support and engagement with a smart conversational assistant",
       "problem": [
         "Conversational AI for Higher Education",
@@ -248,7 +248,7 @@
       ],
       "images": [
         {
-          "src": "/data/images/image6.png",
+          "src": "/Demo_Mindshore/data/images/image6.png",
           "alt": "University Campus Chatbot"
         }
       ],
@@ -276,7 +276,7 @@
       "title": "Grafana-Based Monitoring Platform",
       "client": "Internal Infrastructure",
       "category": "DevOps & Infrastructure",
-      "image": "/data/images/image5.png",
+      "image": "/Demo_Mindshore/data/images/image5.png",
       "summary": "Centralized visibility, proactive alerting, and complete observability across infrastructure",
       "problem": [
         "Building Complete Infrastructure Observability",
@@ -324,11 +324,11 @@
       ],
       "images": [
         {
-          "src": "/data/images/image5.png",
+          "src": "/Demo_Mindshore/data/images/image5.png",
           "alt": "Grafana Dashboard"
         },
         {
-          "src": "/data/images/image8.png",
+          "src": "/Demo_Mindshore/data/images/image8.png",
           "alt": "Monitoring Metrics"
         }
       ],

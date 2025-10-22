@@ -49,7 +49,7 @@ export default function Header({
       {/* Dynamic Logo - Na samym lewym marginesie */}
       <div className="flex items-center transition-all duration-300">
         <img 
-          src={isScrolled ? "/LOGO_sygnet.png" : "/LOGO_vertical.png"}
+          src={isScrolled ? "/Demo_Mindshore/LOGO_sygnet.png" : "/Demo_Mindshore/LOGO_vertical.png"}
           alt="MindShore Logo"
           className="transition-all duration-300"
           style={{
