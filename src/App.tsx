@@ -7,6 +7,9 @@ import ProjectCard from './components/ProjectCard';
 import ProjectModal from './components/ProjectModal';
 import HeroSection from './components/HeroSection';
 
+// Get base URL from Vite config
+const BASE_URL = '/Demo_Mindshore/';
+
 interface ProjectData {
   metadata: {
     generated_at: string;
@@ -58,7 +61,7 @@ export default function App() {
       setLoading(true);
       setError(null);
       
-      const response = await fetch('/projects.json');
+      const response = await fetch(`${BASE_URL}projects.json`);
       if (!response.ok) {
         throw new Error(`Failed to load projects: ${response.status}`);
       }
