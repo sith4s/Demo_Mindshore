@@ -141,7 +141,7 @@ export default function ProjectModal({
           {/* Logo */}
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <img 
-              src="/LOGO_sygnet.png"
+              src="/Demo_Mindshore/LOGO_sygnet.png"
               alt="MindShore Logo"
               style={{ height: '48px', width: 'auto' }}
             />
