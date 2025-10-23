@@ -70,15 +70,17 @@ export default function Header({
           >
             Catalog
           </a>
-          <button
-            onClick={onAboutClick}
+          <a
+            href="https://mindshore.io/en/services/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-white/90 hover:text-white transition-colors duration-300 font-light text-lg"
             style={{
               fontFamily: 'var(--ms-font-body)',
             }}
           >
             About
-          </button>
+          </a>
           <a
             href="https://mindshore.io/contact"
             target="_blank"
