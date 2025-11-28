@@ -56,7 +56,7 @@ async function ingestDocx(): Promise<void> {
           const filename = `project-${Date.now()}-${Math.random().toString(36).substr(2, 9)}.${extension}`;
           const imagePath = path.join(IMAGES_DIR, filename);
           
-          await fs.promises.writeFile(imagePath, image.buffer);
+          await fs.promises.writeFile(imagePath, (image as any).buffer);
           console.log(`💾 Saved image: ${filename}`);
           
           return {

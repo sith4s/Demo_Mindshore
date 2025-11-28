@@ -11,7 +11,7 @@ interface HeaderProps extends BaseComponentProps {
  */
 export default function Header({ 
   className = '', 
-  onAboutClick,
+  onAboutClick: _onAboutClick,
   onContactClick 
 }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
