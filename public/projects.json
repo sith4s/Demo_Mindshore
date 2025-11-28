@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "generated_at": "2025-11-28T12:00:00Z",
+    "source_file": "MindShore Project Catalog",
+    "total_projects": 1,
+    "categories": ["Insurance"],
+    "version": "2.0.0"
+  },
+  "projects": [
+    {
+      "id": "insurance-core-system-1",
+      "title": "Modern Insurance Core System",
+      "client": "Leading Cooperative Insurance Provider",
+      "category": "Insurance",
+      "subtitle": "Core System Modernization",
+      "heroSubtitle": "Development of a new insurance core system for a leading cooperative insurer",
+      "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=450&auto=format&fit=crop&q=80",
+      "summary": "Unlocking rapid product development, operational efficiency, and scalable architecture for the next era of insurance services.",
+      "clientOverview": "Our client is a leading cooperative insurance provider operating nationwide. With a strong legacy and a broad customer base, the organization needed to modernize its core systems to remain competitive and support future digital initiatives.",
+      "businessChallenge": "The insurer was losing its competitive advantage due to outdated core systems. Legacy technology limited product innovation, extended time-to-market, and made it difficult to meet rising customer expectations. The system's rigidity also created operational bottlenecks and made integrations with modern digital channels increasingly complex.",
+      "solution": [
+        "Event-driven microservices to enable loose coupling, high resilience, and smooth scaling",
+        "Apache Kafka as the messaging backbone for asynchronous, real-time communication",
+        "Polyglot persistence allowing optimized data storage based on domain needs",
+        "Integration with R for advanced statistical and actuarial computations",
+        "Full containerization and Kubernetes orchestration for deployment across cloud and on-prem environments",
+        "Modern web application layer implemented using Java SpringBoot and Angular",
+        "Cloud-ready architecture, optimized for AWS but portable across infrastructures"
+      ],
+      "solutionIntro": "We designed and delivered a next-generation modular insurance core platform built for scalability, flexibility, and future growth:",
+      "solutionOutro": "This architecture provides the insurer with a modern, maintainable, and extensible core platform that supports rapid product development and meets strict industry requirements.",
+      "benefits": [
+        "Launch new insurance products faster, accelerating innovation cycles",
+        "Improve operational efficiency through modular design and streamlined processes",
+        "Ensure scalability and performance, especially during high-volume business periods",
+        "Prepare for omnichannel expansion, including web and mobile customer experiences",
+        "Reduce technical debt and establish a robust foundation for long-term digital transformation"
+      ],
+      "benefitsIntro": "The delivery of the first stable, production-ready version of the system enabled the insurer to:",
+      "benefitsOutro": "The platform is now ready for commercialization, and we are actively in discussions with additional insurance sector clients to deploy it.",
+      "problem": ["Legacy systems", "Manual processes", "Inflexible architecture"],
+      "approach": ["Cloud-native", "Microservices", "API-first"],
+      "outcomes": ["70% faster TTM", "50% efficiency gain", "40% cost reduction"],
+      "techStack": ["Java", "Spring Boot", "Angular", "Apache Kafka", "R", "Kubernetes", "AWS Cloud", "Redis", "PostgreSQL"],
+      "tags": ["insurance", "core-system", "modernization", "microservices", "cloud-native"],
+      "images": [],
+      "date": "2025-11-01",
+      "kpis": []
+    }
+  ]
+}

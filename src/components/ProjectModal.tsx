@@ -2,8 +2,21 @@ import { useEffect, useRef } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Project } from '../lib/schema';
 
+interface ExtendedProject extends Project {
+  subtitle?: string;
+  heroSubtitle?: string;
+  clientOverview?: string;
+  businessChallenge?: string;
+  solution?: string[];
+  solutionIntro?: string;
+  solutionOutro?: string;
+  benefits?: string[];
+  benefitsIntro?: string;
+  benefitsOutro?: string;
+}
+
 interface ProjectModalProps {
-  project: Project | null;
+  project: ExtendedProject | null;
   onClose: () => void;
   onPrevious?: () => void;
   onNext?: () => void;
@@ -11,10 +24,6 @@ interface ProjectModalProps {
   hasNext?: boolean;
 }
 
-/**
- * Project Detail Modal Component
- * Full-screen modal with project details, image carousel, and navigation
- */
 export default function ProjectModal({
   project,
   onClose,
@@ -26,52 +35,29 @@ export default function ProjectModal({
   const modalRef = useRef<HTMLDivElement>(null);
   const previousFocusRef = useRef<HTMLElement | null>(null);
 
-  // Focus management and accessibility
   useEffect(() => {
     if (project) {
-      // Store the previously focused element
       previousFocusRef.current = document.activeElement as HTMLElement;
-      
-      // Focus the modal
       modalRef.current?.focus();
-      
-      // Prevent body scrolling
       document.body.style.overflow = 'hidden';
     }
-
     return () => {
-      // Restore body scrolling
       document.body.style.overflow = 'unset';
-      
-      // Restore focus to the previous element
       if (previousFocusRef.current) {
         previousFocusRef.current.focus();
       }
     };
   }, [project]);
 
-  // Keyboard event handling
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!project) return;
-
       switch (e.key) {
-        case 'Escape':
-          onClose();
-          break;
-        case 'ArrowLeft':
-          if (hasPrevious && onPrevious) {
-            onPrevious();
-          }
-          break;
-        case 'ArrowRight':
-          if (hasNext && onNext) {
-            onNext();
-          }
-          break;
+        case 'Escape': onClose(); break;
+        case 'ArrowLeft': if (hasPrevious && onPrevious) onPrevious(); break;
+        case 'ArrowRight': if (hasNext && onNext) onNext(); break;
       }
     };
-
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [project, onClose, onPrevious, onNext, hasPrevious, hasNext]);
@@ -79,9 +65,7 @@ export default function ProjectModal({
   if (!project) return null;
 
   const handleOverlayClick = (e: React.MouseEvent) => {
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
+    if (e.target === e.currentTarget) onClose();
   };
 
   return (
@@ -113,11 +97,10 @@ export default function ProjectModal({
           maxWidth: '1400px',
           margin: '0 auto',
           backgroundColor: '#ffffff',
-          minHeight: '100vh',
-          paddingBottom: '60px'
+          minHeight: '100vh'
         }}
       >
-        {/* Glass Header Bar - fixed at top */}
+        {/* Glass Header Bar */}
         <div 
           style={{
             position: 'fixed',
@@ -126,380 +109,436 @@ export default function ProjectModal({
             transform: 'translateX(-50%)',
             width: '100%',
             maxWidth: '1400px',
-            height: '86px',
+            height: '72px',
             zIndex: 100,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
             padding: '0 40px',
-            background: 'rgba(35, 40, 86, 0.3)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            boxShadow: '0 2px 12px rgba(35, 40, 86, 0.15)'
+            background: 'rgba(35, 40, 86, 0.4)',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)'
           }}
         >
-          {/* Logo */}
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <img 
-              src="/Demo_Mindshore/LOGO_sygnet.png"
-              alt="MindShore Logo"
-              style={{ height: '48px', width: 'auto' }}
-            />
-          </div>
-
-          {/* Navigation and Close buttons */}
+          <img 
+            src="/Demo_Mindshore/LOGO_sygnet.png"
+            alt="MindShore Logo"
+            style={{ height: '40px', width: 'auto' }}
+          />
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             {(hasPrevious || hasNext) && (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginRight: '8px' }}>
+              <>
                 <button
                   onClick={onPrevious}
                   disabled={!hasPrevious}
-                  className="p-2 text-white hover:text-brand-orange disabled:opacity-50 disabled:cursor-not-allowed focus-ring rounded-lg"
-                  aria-label="Previous project"
-                  style={{ background: 'rgba(255, 255, 255, 0.1)' }}
+                  style={{ 
+                    padding: '8px',
+                    background: 'rgba(255,255,255,0.1)',
+                    border: 'none',
+                    borderRadius: '8px',
+                    cursor: hasPrevious ? 'pointer' : 'not-allowed',
+                    opacity: hasPrevious ? 1 : 0.5
+                  }}
                 >
-                  <ChevronLeft className="w-5 h-5" />
+                  <ChevronLeft style={{ width: 20, height: 20, color: '#fff' }} />
                 </button>
                 <button
                   onClick={onNext}
                   disabled={!hasNext}
-                  className="p-2 text-white hover:text-brand-orange disabled:opacity-50 disabled:cursor-not-allowed focus-ring rounded-lg"
-                  aria-label="Next project"
-                  style={{ background: 'rgba(255, 255, 255, 0.1)' }}
+                  style={{ 
+                    padding: '8px',
+                    background: 'rgba(255,255,255,0.1)',
+                    border: 'none',
+                    borderRadius: '8px',
+                    cursor: hasNext ? 'pointer' : 'not-allowed',
+                    opacity: hasNext ? 1 : 0.5,
+                    marginRight: '8px'
+                  }}
                 >
-                  <ChevronRight className="w-5 h-5" />
+                  <ChevronRight style={{ width: 20, height: 20, color: '#fff' }} />
                 </button>
-              </div>
+              </>
             )}
-            
             <button
               onClick={onClose}
-              className="p-2 text-white hover:text-brand-orange focus-ring rounded-lg"
-              aria-label="Close modal"
-              style={{ background: 'rgba(255, 255, 255, 0.1)' }}
+              style={{ 
+                padding: '8px',
+                background: 'rgba(255,255,255,0.1)',
+                border: 'none',
+                borderRadius: '8px',
+                cursor: 'pointer'
+              }}
             >
-              <X className="w-6 h-6" />
+              <X style={{ width: 24, height: 24, color: '#fff' }} />
             </button>
           </div>
         </div>
 
-        {/* Hero Section with Gradient - scrollable */}
+        {/* Hero Section */}
         <div
           style={{
-            background: 'linear-gradient(90deg, #F0811C 0%, #E55197 100%)',
-            minHeight: '37.5vh',
+            background: 'linear-gradient(135deg, #F0811C 0%, #E55197 100%)',
+            minHeight: '340px',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'flex-start',
+            justifyContent: 'center',
             textAlign: 'center',
-            padding: '180px 48px 80px',
-            position: 'relative'
+            padding: '120px 48px 60px'
           }}
         >
-          {/* Category Tag */}
-          <div style={{ marginBottom: '20px' }}>
-            <span style={{
-              fontFamily: 'var(--ms-font-body)',
-              fontSize: '13px',
-              fontWeight: 600,
-              color: '#ffffff',
-              backgroundColor: 'rgba(255, 255, 255, 0.15)',
-              padding: '6px 16px',
-              borderRadius: '20px',
-              textTransform: 'uppercase',
-              letterSpacing: '0.5px'
-            }}>
-              {project.category}
-            </span>
-          </div>
+          <span style={{
+            fontSize: '13px',
+            fontWeight: 600,
+            color: '#ffffff',
+            backgroundColor: 'rgba(255,255,255,0.2)',
+            padding: '6px 16px',
+            borderRadius: '20px',
+            textTransform: 'uppercase',
+            letterSpacing: '1px',
+            marginBottom: '24px'
+          }}>
+            {project.category} | {project.subtitle || 'Core System Modernization'}
+          </span>
 
-          {/* Project Title - 45% smaller total (25% + 20%) */}
           <h1 
             id="modal-title"
             style={{
-              fontFamily: 'var(--ms-font-heading)',
-              fontSize: 'clamp(19px, 3vw, 38px)',
+              fontSize: 'clamp(28px, 4vw, 42px)',
               fontWeight: 700,
               color: '#ffffff',
-              marginBottom: '20px',
-              maxWidth: '900px',
+              marginBottom: '16px',
+              maxWidth: '800px',
               lineHeight: 1.2
             }}
           >
             {project.title}
           </h1>
 
-          {/* Summary/Subtitle - 20% smaller */}
-          <p
-            style={{
-              fontFamily: 'var(--ms-font-body)',
-              fontSize: 'clamp(14px, 1.6vw, 19px)',
-              fontWeight: 400,
-              color: '#ffffff',
-              opacity: 0.95,
-              marginBottom: '28px',
-              maxWidth: '700px',
-              lineHeight: 1.5
-            }}
-          >
-            {project.summary}
-          </p>
-
-          {/* White divider line */}
-          <div
-            style={{
-              width: '80px',
-              height: '2px',
-              background: 'rgba(255, 255, 255, 0.5)',
-              marginBottom: '24px'
-            }}
-          />
-
-          {/* Client name */}
-          <p
-            style={{
-              fontFamily: 'var(--ms-font-body)',
-              fontSize: 'var(--ms-fs-base)',
-              fontWeight: 500,
-              color: '#ffffff',
-              opacity: 0.9
-            }}
-          >
-            {project.client}
+          <p style={{
+            fontSize: 'clamp(16px, 2vw, 20px)',
+            color: 'rgba(255,255,255,0.95)',
+            maxWidth: '700px',
+            lineHeight: 1.5
+          }}>
+            {project.heroSubtitle || project.summary}
           </p>
         </div>
 
-        {/* Content */}
-        <div className="p-6" style={{ maxWidth: '1200px', margin: '0 auto', backgroundColor: '#ffffff' }}>
-          {/* Three white boxes: Business, Solution, Impact */}
-          <div className="mb-8" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+        {/* Main Content - Minimalist Design */}
+        <div style={{ 
+          maxWidth: '900px', 
+          margin: '0 auto', 
+          padding: '80px 40px 100px',
+          backgroundColor: '#ffffff'
+        }}>
+          
+          {/* Client Overview */}
+          <section style={{ marginBottom: '64px' }}>
+            <h2 style={{
+              fontSize: '12px',
+              fontWeight: 600,
+              color: '#F0811C',
+              textTransform: 'uppercase',
+              letterSpacing: '2px',
+              marginBottom: '16px'
+            }}>
+              Client Overview
+            </h2>
+            <p style={{
+              fontSize: '18px',
+              lineHeight: 1.8,
+              color: '#232856'
+            }}>
+              {project.clientOverview || 'Our client is a leading cooperative insurance provider operating nationwide. With a strong legacy and a broad customer base, the organization needed to modernize its core systems to remain competitive and support future digital initiatives.'}
+            </p>
+          </section>
+
+          {/* Divider */}
+          <div style={{ 
+            width: '60px', 
+            height: '2px', 
+            background: 'linear-gradient(90deg, #F0811C, #E55197)',
+            marginBottom: '64px'
+          }} />
+
+          {/* Business Challenge */}
+          <section style={{ marginBottom: '64px' }}>
+            <h2 style={{
+              fontSize: '12px',
+              fontWeight: 600,
+              color: '#F0811C',
+              textTransform: 'uppercase',
+              letterSpacing: '2px',
+              marginBottom: '16px'
+            }}>
+              Business Challenge
+            </h2>
+            <p style={{
+              fontSize: '18px',
+              lineHeight: 1.8,
+              color: '#232856'
+            }}>
+              {project.businessChallenge || 'The insurer was losing its competitive advantage due to outdated core systems. Legacy technology limited product innovation, extended time-to-market, and made it difficult to meet rising customer expectations.'}
+            </p>
+          </section>
+
+          {/* Divider */}
+          <div style={{ 
+            width: '60px', 
+            height: '2px', 
+            background: 'linear-gradient(90deg, #F0811C, #E55197)',
+            marginBottom: '64px'
+          }} />
+
+          {/* Our Solution */}
+          <section style={{ marginBottom: '64px' }}>
+            <h2 style={{
+              fontSize: '12px',
+              fontWeight: 600,
+              color: '#F0811C',
+              textTransform: 'uppercase',
+              letterSpacing: '2px',
+              marginBottom: '16px'
+            }}>
+              Our Solution
+            </h2>
+            <p style={{
+              fontSize: '18px',
+              lineHeight: 1.8,
+              color: '#232856',
+              marginBottom: '32px'
+            }}>
+              {project.solutionIntro || 'We designed and delivered a next-generation modular insurance core platform built for scalability, flexibility, and future growth:'}
+            </p>
             
-            {/* Box 1: Business (Problem) */}
-            <div
-              style={{
-                background: '#ffffff',
-                borderRadius: '12px',
-                borderTopLeftRadius: '24px',
-                padding: '32px',
-                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
-                display: 'flex',
-                gap: '24px',
-                alignItems: 'flex-start'
-              }}
-            >
-              {/* Icon */}
-              <div
-                style={{
-                  width: '56px',
-                  height: '56px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '32px',
-                  flexShrink: 0
-                }}
-              >
-                💼
-              </div>
-              
-              {/* Content */}
-              <div style={{ flex: 1 }}>
-                {project.problem.map((text, index) => (
-                  <p 
-                    key={index}
-                    style={{ 
-                      fontFamily: index === 0 ? 'var(--ms-font-heading)' : 'var(--ms-font-body)',
-                      fontSize: index === 0 ? '20px' : '15px',
-                      fontWeight: index === 0 ? 600 : 400,
-                      color: index === 0 ? 'var(--ms-blue)' : '#666',
-                      lineHeight: '1.6',
-                      marginBottom: index < project.problem.length - 1 ? '12px' : '0'
-                    }}
-                  >
-                    {text}
-                  </p>
-                ))}
-              </div>
-            </div>
+            <ul style={{ 
+              listStyle: 'none', 
+              padding: 0, 
+              margin: '0 0 32px 0'
+            }}>
+              {(project.solution || [
+                'Event-driven microservices to enable loose coupling, high resilience, and smooth scaling',
+                'Apache Kafka as the messaging backbone for asynchronous, real-time communication',
+                'Polyglot persistence allowing optimized data storage based on domain needs',
+                'Integration with R for advanced statistical and actuarial computations',
+                'Full containerization and Kubernetes orchestration for deployment across cloud and on-prem environments',
+                'Modern web application layer implemented using Java SpringBoot and Angular',
+                'Cloud-ready architecture, optimized for AWS but portable across infrastructures'
+              ]).map((item, index) => (
+                <li 
+                  key={index}
+                  style={{
+                    fontSize: '16px',
+                    lineHeight: 1.8,
+                    color: '#485257',
+                    paddingLeft: '24px',
+                    position: 'relative',
+                    marginBottom: '12px'
+                  }}
+                >
+                  <span style={{
+                    position: 'absolute',
+                    left: 0,
+                    top: '10px',
+                    width: '6px',
+                    height: '6px',
+                    borderRadius: '50%',
+                    background: 'linear-gradient(135deg, #F0811C, #E55197)'
+                  }} />
+                  {item}
+                </li>
+              ))}
+            </ul>
 
-            {/* Box 2: Solution (Approach) */}
-            <div
-              style={{
-                background: '#ffffff',
-                borderRadius: '12px',
-                borderTopLeftRadius: '24px',
-                padding: '32px',
-                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
-                display: 'flex',
-                gap: '24px',
-                alignItems: 'flex-start'
-              }}
-            >
-              {/* Icon */}
-              <div
-                style={{
-                  width: '56px',
-                  height: '56px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '32px',
-                  flexShrink: 0
-                }}
-              >
-                ⚙️
-              </div>
-              
-              {/* Content */}
-              <div style={{ flex: 1 }}>
-                {project.approach.map((text, index) => (
-                  <p 
-                    key={index}
-                    style={{ 
-                      fontFamily: 'var(--ms-font-body)',
-                      fontSize: '15px',
-                      lineHeight: '1.6',
-                      color: '#666',
-                      marginBottom: index < project.approach.length - 1 ? '12px' : '16px'
-                    }}
-                  >
-                    {text}
-                  </p>
-                ))}
-                
-                {/* Images below approach - responsive grid */}
-                {project.images && project.images.length > 0 && (
-                  <div style={{ 
-                    display: 'grid', 
-                    gridTemplateColumns: project.images.length === 1 
-                      ? '1fr' 
-                      : project.images.length === 2 
-                        ? 'repeat(2, 1fr)' 
-                        : 'repeat(3, 1fr)', 
-                    gap: '16px',
-                    marginTop: '24px'
-                  }}>
-                    {project.images.map((image, index) => (
-                      <img
-                        key={index}
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full rounded-lg"
-                        style={{ 
-                          width: '100%',
-                          height: 'auto',
-                          objectFit: 'contain'
-                        }}
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                        }}
-                      />
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
+            <p style={{
+              fontSize: '18px',
+              lineHeight: 1.8,
+              color: '#232856'
+            }}>
+              {project.solutionOutro || 'This architecture provides the insurer with a modern, maintainable, and extensible core platform that supports rapid product development and meets strict industry requirements.'}
+            </p>
+          </section>
 
-            {/* Box 3: Impact (Outcomes) */}
-            <div
-              style={{
-                background: '#ffffff',
-                borderRadius: '12px',
-                borderTopLeftRadius: '24px',
-                padding: '32px',
-                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
-                display: 'flex',
-                gap: '24px',
-                alignItems: 'flex-start'
-              }}
-            >
-              {/* Icon */}
-              <div
-                style={{
-                  width: '56px',
-                  height: '56px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '32px',
-                  flexShrink: 0
-                }}
-              >
-                📈
-              </div>
-              
-              {/* Content */}
-              <div style={{ flex: 1 }}>
-                {project.outcomes.map((text, index) => (
-                  <p 
-                    key={index}
-                    style={{ 
-                      fontFamily: 'var(--ms-font-body)',
-                      fontSize: '15px',
-                      lineHeight: '1.6',
-                      color: '#666',
-                      marginBottom: index < project.outcomes.length - 1 ? '12px' : '0'
-                    }}
-                  >
-                    {text}
-                  </p>
-                ))}
-              </div>
-            </div>
-          </div>
+          {/* Divider */}
+          <div style={{ 
+            width: '60px', 
+            height: '2px', 
+            background: 'linear-gradient(90deg, #F0811C, #E55197)',
+            marginBottom: '64px'
+          }} />
 
-          {/* Technology Stack */}
-          <div className="mb-8">
-            <h2 className="text-xl font-semibold text-brand-fg mb-4">Technology Stack</h2>
-            <div className="flex flex-wrap gap-2">
+          {/* Business Benefits */}
+          <section style={{ marginBottom: '64px' }}>
+            <h2 style={{
+              fontSize: '12px',
+              fontWeight: 600,
+              color: '#F0811C',
+              textTransform: 'uppercase',
+              letterSpacing: '2px',
+              marginBottom: '16px'
+            }}>
+              Business Benefits
+            </h2>
+            <p style={{
+              fontSize: '18px',
+              lineHeight: 1.8,
+              color: '#232856',
+              marginBottom: '32px'
+            }}>
+              {project.benefitsIntro || 'The delivery of the first stable, production-ready version of the system enabled the insurer to:'}
+            </p>
+            
+            <ul style={{ 
+              listStyle: 'none', 
+              padding: 0, 
+              margin: '0 0 32px 0'
+            }}>
+              {(project.benefits || [
+                'Launch new insurance products faster, accelerating innovation cycles',
+                'Improve operational efficiency through modular design and streamlined processes',
+                'Ensure scalability and performance, especially during high-volume business periods',
+                'Prepare for omnichannel expansion, including web and mobile customer experiences',
+                'Reduce technical debt and establish a robust foundation for long-term digital transformation'
+              ]).map((item, index) => (
+                <li 
+                  key={index}
+                  style={{
+                    fontSize: '16px',
+                    lineHeight: 1.8,
+                    color: '#485257',
+                    paddingLeft: '24px',
+                    position: 'relative',
+                    marginBottom: '12px'
+                  }}
+                >
+                  <span style={{
+                    position: 'absolute',
+                    left: 0,
+                    top: '10px',
+                    width: '6px',
+                    height: '6px',
+                    borderRadius: '50%',
+                    background: 'linear-gradient(135deg, #F0811C, #E55197)'
+                  }} />
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <p style={{
+              fontSize: '18px',
+              lineHeight: 1.8,
+              color: '#232856',
+              fontStyle: 'italic'
+            }}>
+              {project.benefitsOutro || 'The platform is now ready for commercialization, and we are actively in discussions with additional insurance sector clients to deploy it.'}
+            </p>
+          </section>
+
+          {/* Divider */}
+          <div style={{ 
+            width: '60px', 
+            height: '2px', 
+            background: 'linear-gradient(90deg, #F0811C, #E55197)',
+            marginBottom: '64px'
+          }} />
+
+          {/* App Screenshots */}
+          <section style={{ marginBottom: '64px' }}>
+            <h2 style={{
+              fontSize: '12px',
+              fontWeight: 600,
+              color: '#F0811C',
+              textTransform: 'uppercase',
+              letterSpacing: '2px',
+              marginBottom: '32px'
+            }}>
+              Application Screenshots
+            </h2>
+            <div style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(3, 1fr)', 
+              gap: '24px',
+              alignItems: 'start'
+            }}>
+              <img 
+                src="/Demo_Mindshore/images/projects/insurance1.png" 
+                alt="Insurance App - Main Screen"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  borderRadius: '16px',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)'
+                }}
+              />
+              <img 
+                src="/Demo_Mindshore/images/projects/insurance2.png" 
+                alt="Insurance App - Coverage Certificate"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  borderRadius: '16px',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)'
+                }}
+              />
+              <img 
+                src="/Demo_Mindshore/images/projects/insurance3.png" 
+                alt="Insurance App - Payment"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  borderRadius: '16px',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)'
+                }}
+              />
+            </div>
+          </section>
+
+          {/* Divider */}
+          <div style={{ 
+            width: '60px', 
+            height: '2px', 
+            background: 'linear-gradient(90deg, #F0811C, #E55197)',
+            marginBottom: '64px'
+          }} />
+
+          {/* Technologies Used */}
+          <section>
+            <h2 style={{
+              fontSize: '12px',
+              fontWeight: 600,
+              color: '#F0811C',
+              textTransform: 'uppercase',
+              letterSpacing: '2px',
+              marginBottom: '24px'
+            }}>
+              Technologies Used
+            </h2>
+            <div style={{ 
+              display: 'flex', 
+              flexWrap: 'wrap', 
+              gap: '12px' 
+            }}>
               {project.techStack.map((tech, index) => (
                 <span
                   key={index}
-                  className="bg-brand-primary/20 text-brand-primary px-3 py-2 rounded-lg text-sm font-medium border border-brand-primary/30"
+                  style={{
+                    fontSize: '14px',
+                    fontWeight: 500,
+                    color: '#232856',
+                    backgroundColor: 'rgba(35, 40, 86, 0.06)',
+                    padding: '10px 20px',
+                    borderRadius: '24px',
+                    border: '1px solid rgba(35, 40, 86, 0.1)'
+                  }}
                 >
                   {tech}
                 </span>
               ))}
             </div>
-          </div>
+          </section>
 
-          {/* Tags */}
-          <div>
-            <h2 className="text-xl font-semibold text-brand-fg mb-4">Tags</h2>
-            <div className="flex flex-wrap gap-2">
-              {project.tags.map((tag, index) => (
-                <span 
-                  key={index}
-                  style={{
-                    fontFamily: 'var(--ms-font-body)',
-                    fontSize: '13px',
-                    fontWeight: 500,
-                    color: 'var(--ms-blue)',
-                    backgroundColor: 'rgba(35, 40, 86, 0.08)',
-                    padding: '6px 12px',
-                    borderRadius: '16px'
-                  }}
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* Date */}
-          {project.date && (
-            <div className="mt-8 pt-6 border-t border-border">
-              <p className="text-sm text-brand-muted">
-                Project completed: {new Date(project.date).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })}
-              </p>
-            </div>
-          )}
         </div>
       </div>
     </div>

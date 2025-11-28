@@ -87,24 +87,24 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
       </div>
 
       {/* Title and Client */}
-      <div className="mb-4">
+      <div className="mb-3">
         <h3 
-          className="font-bold mb-2 line-clamp-2"
+          className="font-bold mb-1 line-clamp-2"
           style={{
             fontFamily: 'var(--ms-font-body)',
-            fontSize: 'var(--ms-fs-md)',
+            fontSize: '16px',
             color: 'var(--ms-orange)',
-            lineHeight: 'var(--ms-lh-snug)'
+            lineHeight: '1.3'
           }}
         >
           {project.title}
         </h3>
         <p 
-          className="text-sm"
+          className="text-xs"
           style={{
             fontFamily: 'var(--ms-font-body)',
             color: 'var(--ms-gray-700)',
-            fontSize: 'var(--ms-fs-sm)'
+            fontSize: '13px'
           }}
         >
           {project.client}
@@ -113,12 +113,12 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
 
       {/* Summary */}
       <p 
-        className="line-clamp-3"
+        className="line-clamp-4"
         style={{
           fontFamily: 'var(--ms-font-body)',
-          fontSize: 'var(--ms-fs-base)',
+          fontSize: '14px',
           color: 'var(--ms-blue)',
-          lineHeight: 'var(--ms-lh-normal)'
+          lineHeight: '1.5'
         }}
       >
         {project.summary}

@@ -1,0 +1,37 @@
+<svg width="400" height="250" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="url(#gradient5)"/>
+  <defs>
+    <linearGradient id="gradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f97316;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Computer Vision Icons -->
+  <g transform="translate(100, 50)">
+    <!-- Camera/Eye icon -->
+    <circle cx="100" cy="75" r="40" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="3"/>
+    <circle cx="100" cy="75" r="20" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+    <circle cx="100" cy="75" r="8" fill="rgba(255,255,255,0.8)"/>
+    
+    <!-- Detection boxes -->
+    <rect x="40" y="40" width="30" height="20" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-dasharray="5,5"/>
+    <rect x="130" y="45" width="25" height="15" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-dasharray="5,5"/>
+    <rect x="50" y="90" width="20" height="25" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-dasharray="5,5"/>
+    <rect x="140" y="95" width="35" height="18" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-dasharray="5,5"/>
+    
+    <!-- Scan lines -->
+    <line x1="20" y1="60" x2="180" y2="60" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+    <line x1="20" y1="80" x2="180" y2="80" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+    <line x1="20" y1="100" x2="180" y2="100" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+    
+    <!-- Confidence indicators -->
+    <text x="45" y="35" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="8">98%</text>
+    <text x="135" y="40" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="8">94%</text>
+    <text x="55" y="140" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="8">89%</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="200" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Computer Vision System</text>
+  <text x="200" y="220" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="12">Object Detection • Image Recognition • CV</text>
+</svg>
