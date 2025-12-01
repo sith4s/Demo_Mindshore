@@ -13,6 +13,7 @@ interface ExtendedProject extends Project {
   benefits?: string[];
   benefitsIntro?: string;
   benefitsOutro?: string;
+  screenshots?: { src: string; alt: string }[];
 }
 
 interface ProjectModalProps {
@@ -444,64 +445,68 @@ export default function ProjectModal({
             marginBottom: '64px'
           }} />
 
-          {/* App Screenshots */}
-          <section style={{ marginBottom: '64px' }}>
-            <h2 style={{
-              fontSize: '12px',
-              fontWeight: 600,
-              color: '#F0811C',
-              textTransform: 'uppercase',
-              letterSpacing: '2px',
-              marginBottom: '32px'
-            }}>
-              Application Screenshots
-            </h2>
-            <div style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(3, 1fr)', 
-              gap: '24px',
-              alignItems: 'start'
-            }}>
-              <img 
-                src="/Demo_Mindshore/images/projects/insurance1.png" 
-                alt="Insurance App - Main Screen"
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  borderRadius: '16px',
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)'
-                }}
-              />
-              <img 
-                src="/Demo_Mindshore/images/projects/insurance2.png" 
-                alt="Insurance App - Coverage Certificate"
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  borderRadius: '16px',
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)'
-                }}
-              />
-              <img 
-                src="/Demo_Mindshore/images/projects/insurance3.png" 
-                alt="Insurance App - Payment"
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  borderRadius: '16px',
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)'
-                }}
-              />
-            </div>
-          </section>
+          {/* App Screenshots - only show for projects with screenshots */}
+          {project.id === 'insurance-core-system-1' && (
+            <>
+              <section style={{ marginBottom: '64px' }}>
+                <h2 style={{
+                  fontSize: '12px',
+                  fontWeight: 600,
+                  color: '#F0811C',
+                  textTransform: 'uppercase',
+                  letterSpacing: '2px',
+                  marginBottom: '32px'
+                }}>
+                  Application Screenshots
+                </h2>
+                <div style={{ 
+                  display: 'grid', 
+                  gridTemplateColumns: 'repeat(3, 1fr)', 
+                  gap: '24px',
+                  alignItems: 'start'
+                }}>
+                  <img 
+                    src="/Demo_Mindshore/images/projects/insurance1.png" 
+                    alt="Insurance App - Main Screen"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '16px',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)'
+                    }}
+                  />
+                  <img 
+                    src="/Demo_Mindshore/images/projects/insurance2.png" 
+                    alt="Insurance App - Coverage Certificate"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '16px',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)'
+                    }}
+                  />
+                  <img 
+                    src="/Demo_Mindshore/images/projects/insurance3.png" 
+                    alt="Insurance App - Payment"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '16px',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)'
+                    }}
+                  />
+                </div>
+              </section>
 
-          {/* Divider */}
-          <div style={{ 
-            width: '60px', 
-            height: '2px', 
-            background: 'linear-gradient(90deg, #F0811C, #E55197)',
-            marginBottom: '64px'
-          }} />
+              {/* Divider */}
+              <div style={{ 
+                width: '60px', 
+                height: '2px', 
+                background: 'linear-gradient(90deg, #F0811C, #E55197)',
+                marginBottom: '64px'
+              }} />
+            </>
+          )}
 
           {/* Technologies Used */}
           <section>
