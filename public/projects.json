@@ -2,11 +2,66 @@
   "metadata": {
     "generated_at": "2025-12-02T12:00:00Z",
     "source_file": "MindShore Project Catalog",
-    "total_projects": 10,
-    "categories": ["Consumer Apps", "Insurance", "Retail", "Social Media", "Real Estate", "Healthcare", "Publishing", "Construction", "Agriculture"],
+    "total_projects": 11,
+    "categories": ["Consumer Apps", "Insurance", "Retail", "Social Media", "Real Estate", "Healthcare", "Publishing", "Construction", "Agriculture", "Food Manufacturing"],
     "version": "2.0.0"
   },
   "projects": [
+    {
+      "id": "tuna-sqs-system-1",
+      "title": "Tuna Sales Quotation System (SQS)",
+      "client": "Global Market Leader in Fishing & Processing",
+      "category": "Food Manufacturing",
+      "subtitle": "Custom Software Development (Sales System)",
+      "heroSubtitle": "A centralized, data-driven platform for smarter pricing, real-time KPI visibility, and full control over the sales quotation process",
+      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=450&auto=format&fit=crop&q=80",
+      "summary": "Centralized sales visibility, real-time KPI monitoring, and smarter pricing analysis for global tuna sales operations.",
+      "clientOverview": "The client is a global market leader in fishing and processing, managing complex international sales operations across multiple tuna species and product lines.",
+      "businessChallenge": "The sales quotation process for tuna products was highly fragmented: quotations stored across different files and channels, limited visibility into status, conversion, and expiry, slow response times due to manual data tracking, no consolidated pricing reference across species, and decision-making based on reactive, rather than real-time, insights. The lack of a unified system made it difficult for sales teams to stay agile, maintain competitive pricing, and understand performance across markets. The client needed a centralized, data-driven solution to streamline quotation workflows and provide real-time visibility into KPIs.",
+      "solution": [
+        "Centralized Quotation Management: A dedicated platform where all tuna quotations are created, stored, tracked, and updated—replacing fragmented, manual workflows",
+        "Real-Time KPI Dashboards: Integrated dashboards providing immediate insights into pending and expiring quotes, species-specific price variations, conversion rates, average response times, and historical trends",
+        "Smarter Pricing Analysis: The system consolidates pricing data across fish species, enabling faster and more informed pricing decisions based on live market conditions",
+        "Unified Sales Visibility: A single source of truth for all quotation-related activities, improving collaboration and ensuring consistent access to critical business data",
+        "Scalable, custom-built architecture: Designed for extensibility—future modules such as forecasting, inventory linkage, or CRM integration can be added without rework"
+      ],
+      "solutionIntro": "We delivered the SQS Project, a custom-built Tuna Sales Quotation System designed to transform the client's sales process:",
+      "solutionOutro": "The platform provides complete control over the entire quotation lifecycle with real-time insights and data-driven decision support.",
+      "benefits": [
+        "Fully centralize their sales quotation operations",
+        "Improve agility and response times through real-time insights",
+        "Enhance pricing accuracy with species-specific data consolidation",
+        "Track performance and conversion with reliable KPI monitoring",
+        "Strengthen decision-making with clear visibility into the sales pipeline",
+        "Increase overall sales efficiency and accountability"
+      ],
+      "benefitsIntro": "The SQS platform enabled the client to:",
+      "benefitsOutro": "The system now serves as the foundation for all sales quotation operations across global markets.",
+      "results": [
+        "Delivered a production-ready system covering the full quotation lifecycle",
+        "Enabled real-time analysis of KPIs, quotation statuses, and pricing trends",
+        "Significantly improved sales responsiveness and operational transparency",
+        "Empowered the company to base pricing and strategy on accurate, centralized data"
+      ],
+      "resultsIntro": "The project achieved significant milestones:",
+      "problem": ["Fragmented quotations", "Limited visibility", "Manual data tracking", "No pricing reference"],
+      "approach": ["Centralized platform", "KPI dashboards", "Pricing analysis", "Scalable architecture"],
+      "outcomes": ["Full quotation lifecycle", "Real-time KPI analysis", "Improved responsiveness"],
+      "techStack": ["Custom Development", "Reporting & Analytics", "KPI Dashboards", "SQS-System Architecture"],
+      "tags": ["custom-development", "SQS", "sales-system", "reporting-analytics", "kpi"],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=450&auto=format&fit=crop&q=80",
+          "alt": "Tuna Sales Quotation System"
+        }
+      ],
+      "date": "2025-12-01",
+      "kpis": [
+        { "label": "Visibility", "value": "100%", "description": "Full quotation lifecycle visibility" },
+        { "label": "Response Time", "value": "↓60%", "description": "Faster sales response" },
+        { "label": "Accuracy", "value": "↑85%", "description": "Improved pricing accuracy" }
+      ]
+    },
     {
       "id": "hr-performance-platform-1",
       "title": "Corporate Performance Evaluation Platform",
