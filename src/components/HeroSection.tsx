@@ -18,9 +18,7 @@ export default function HeroSection({
   searchValue = '', 
   availableCategories = [],
   selectedCategory = 'All',
-  onCategorySelect,
-  sortBy = 'newest',
-  onSortChange
+  onCategorySelect
 }: HeroSectionProps) {
   const [searchTerm, setSearchTerm] = useState(searchValue);
 
@@ -43,8 +41,8 @@ export default function HeroSection({
     <section 
       className="relative flex items-center justify-center"
       style={{
-        height: '50vh',
-        minHeight: '400px',
+        height: '60vh',
+        minHeight: '500px',
         backgroundImage: `linear-gradient(rgba(35, 40, 86, 0.4), rgba(35, 40, 86, 0.6)), url('https://cdn.sanity.io/images/s7xbv9bz/production/b9410c23bc3d993ee3df321dcc9815fe62fad85b-6000x4000.jpg?w=1920&h=1280&auto=format&fm=webp&q=100')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center bottom', /* Dolna krawędź zdjęcia wyrównana z dołem Hero */
@@ -137,7 +135,7 @@ export default function HeroSection({
                   <button
                     key={category}
                     onClick={() => onCategorySelect?.(category)}
-                    className="px-4 py-2 rounded-full transition-all duration-300 hover:scale-105"
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
                     style={{
                       backgroundColor: selectedCategory === category 
                         ? 'rgba(240, 129, 28, 0.9)' 
@@ -155,50 +153,6 @@ export default function HeroSection({
                     {category}
                   </button>
                 ))}
-                
-                {/* Sort Dropdown - inline with categories */}
-                {onSortChange && (
-                  <div className="relative">
-                    <select
-                      value={sortBy}
-                      onChange={(e) => onSortChange(e.target.value as 'newest' | 'az')}
-                      className="px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 appearance-none cursor-pointer pr-8"
-                      style={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.15)',
-                        backdropFilter: 'blur(10px)',
-                        border: '1px solid rgba(255, 255, 255, 0.2)',
-                        color: 'rgba(255, 255, 255, 0.9)',
-                        fontFamily: '"Berthold Akzidenz Grotesk", "Akzidenz-Grotesk", var(--ms-font-body)',
-                        fontWeight: 300,
-                        fontSize: '0.75rem',
-                      }}
-                    >
-                      <option value="newest" style={{ backgroundColor: 'rgba(35, 40, 86, 0.95)', color: 'white' }}>
-                        Newest First
-                      </option>
-                      <option value="az" style={{ backgroundColor: 'rgba(35, 40, 86, 0.95)', color: 'white' }}>
-                        A-Z
-                      </option>
-                    </select>
-                    
-                    {/* Custom dropdown arrow */}
-                    <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                      <svg 
-                        className="w-3 h-3 text-white/70" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24"
-                      >
-                        <path 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round" 
-                          strokeWidth={2} 
-                          d="M19 9l-7 7-7-7" 
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                )}
               </div>
             )}
           </div>
