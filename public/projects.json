@@ -1,12 +1,67 @@
 {
   "metadata": {
-    "generated_at": "2025-12-01T12:00:00Z",
+    "generated_at": "2025-12-02T12:00:00Z",
     "source_file": "MindShore Project Catalog",
-    "total_projects": 9,
-    "categories": ["Consumer Apps", "Insurance", "Retail", "Social Media", "Real Estate", "Healthcare", "Publishing", "Construction"],
+    "total_projects": 10,
+    "categories": ["Consumer Apps", "Insurance", "Retail", "Social Media", "Real Estate", "Healthcare", "Publishing", "Construction", "Agriculture"],
     "version": "2.0.0"
   },
   "projects": [
+    {
+      "id": "hr-performance-platform-1",
+      "title": "Corporate Performance Evaluation Platform",
+      "client": "Global Leader in Fishing & Processing",
+      "category": "Agriculture",
+      "subtitle": "Custom Web Application – HR Performance Management",
+      "heroSubtitle": "A centralized, secure HR performance system with corporate authentication and automated evaluation workflows",
+      "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=450&auto=format&fit=crop&q=80",
+      "summary": "Centralized employee assessment system with corporate authentication enabling streamlined performance evaluation across the enterprise.",
+      "clientOverview": "The client is a global player in the fishing and processing industry, employing thousands across multiple regions. Their HR operations required a scalable, modern solution for structured performance evaluation.",
+      "businessChallenge": "The organization managed employee performance evaluations through spreadsheets, emails, and manual coordination, resulting in: inconsistent and fragmented assessment cycles, high administrative workload for HR, slow and error-prone data consolidation, difficulty tracking progress, KPIs, and historical performance, lack of secure, centralized access for employees, and the need for seamless integration with the company's Active Directory, ensuring proper user management and authentication. They required a unified, secure platform that would streamline all performance evaluation processes and allow employees to log in using their corporate credentials.",
+      "solution": [
+        "Custom HR Evaluation Platform: Developed a web-based system using a modern PHP framework with Symfony components and a relational database (MySQL/PostgreSQL). Key features include centralized evaluations, scoring models, workflows, KPI tracking, and automated report generation",
+        "Active Directory Integration: Implemented LDAP/AD synchronization to automatically import employee records, roles and permission levels, and organizational hierarchy",
+        "Corporate Authentication (SSO): Enabled secure single sign-on using employees' corporate passwords, fully integrated with the company's Active Directory",
+        "Evaluation Workflows: Designed flexible, configurable workflows supporting annual performance reviews, 360° evaluations, manager/employee assessment cycles, and peer feedback",
+        "Reporting & Dashboards: Created real-time dashboards for HR and management, showing performance distribution, completion rates, department-level insights, and historical trend analysis"
+      ],
+      "solutionIntro": "We engineered a comprehensive, enterprise-grade HR evaluation platform with the following capabilities:",
+      "solutionOutro": "The result is a scalable platform tailored to enterprise HR needs, aligned with security standards and internal IT architecture.",
+      "benefits": [
+        "Fully centralize the performance evaluation process across all departments",
+        "Eliminate manual tasks, reducing administrative effort significantly",
+        "Increase data accuracy and transparency",
+        "Enable seamless employee login using corporate credentials",
+        "Improve decision-making with real-time metrics and dashboards",
+        "Support standardized evaluation practices across the organization"
+      ],
+      "benefitsIntro": "The new platform enabled the client to:",
+      "benefitsOutro": "The platform now serves as the foundation for all HR performance management across the enterprise.",
+      "results": [
+        "Successful deployment of a secure, company-wide evaluation platform",
+        "Significant reduction of HR workload due to automation",
+        "Improved transparency and consistency of evaluations",
+        "Stronger data-driven insights enabling smarter talent decisions"
+      ],
+      "resultsIntro": "The project achieved significant milestones:",
+      "problem": ["Fragmented assessment cycles", "High administrative workload", "Manual data consolidation", "No centralized access"],
+      "approach": ["Symfony PHP platform", "Active Directory integration", "SSO authentication", "Automated workflows"],
+      "outcomes": ["Company-wide evaluation platform", "Automated HR workflows", "Real-time dashboards"],
+      "techStack": ["PHP", "Symfony", "Twig", "MySQL", "PostgreSQL", "LDAP", "Active Directory", "SSO Authentication", "REST APIs"],
+      "tags": ["HR Tech", "Performance Evaluation", "Web Development", "Active Directory", "SSO", "Enterprise Applications", "Custom Software"],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=450&auto=format&fit=crop&q=80",
+          "alt": "Corporate Performance Evaluation Platform"
+        }
+      ],
+      "date": "2025-12-01",
+      "kpis": [
+        { "label": "Automation", "value": "↑80%", "description": "Reduction in manual HR tasks" },
+        { "label": "Accuracy", "value": "↑95%", "description": "Data consistency improvement" },
+        { "label": "Efficiency", "value": "↑60%", "description": "Faster evaluation cycles" }
+      ]
+    },
     {
       "id": "aso-ai-platform-1",
       "title": "AI-Powered ASO Optimization Platform",
