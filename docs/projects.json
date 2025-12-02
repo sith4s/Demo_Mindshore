@@ -2,11 +2,66 @@
   "metadata": {
     "generated_at": "2025-12-02T12:00:00Z",
     "source_file": "MindShore Project Catalog",
-    "total_projects": 11,
-    "categories": ["Consumer Apps", "Insurance", "Retail", "Social Media", "Real Estate", "Healthcare", "Publishing", "Construction", "Agriculture", "Food Manufacturing"],
+    "total_projects": 12,
+    "categories": ["Consumer Apps", "Insurance", "Retail", "Social Media", "Real Estate", "Healthcare", "Publishing", "Construction", "Agriculture", "Food Manufacturing", "Consulting"],
     "version": "2.0.0"
   },
   "projects": [
+    {
+      "id": "malawi-voting-platform-1",
+      "title": "Malawi Digital Voting Platform",
+      "client": "Premier Digital Solutions Provider",
+      "category": "Consulting",
+      "subtitle": "Digital Government & Civic Technology",
+      "heroSubtitle": "A tablet-based, offline-first election system enabling faster, more transparent, and more accessible voting across the entire country",
+      "image": "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=800&h=450&auto=format&fit=crop&q=80",
+      "summary": "Tablet-based election management for enhanced accessibility and efficiency across national elections.",
+      "clientOverview": "The client is a premier technology provider that specializes in digital transformation solutions for governments, institutions, and large-scale public programs. Their mission: using technology to improve accessibility, operational efficiency, and civic engagement.",
+      "businessChallenge": "Malawi's national elections relied heavily on traditional, paper-based processes, leading to critical challenges: complex logistics for distributing and managing paper ballots across remote regions, delays in counting and tabulating results, significant risk of human error and operational bottlenecks, limited transparency and difficulty providing real-time reporting, and many polling stations operating with unreliable or non-existent internet connection, making digital systems difficult to adopt. The country needed a secure, scalable, and connectivity-resilient digital voting system that could support millions of voters while still generating physical ballots as an auditable paper trail.",
+      "solution": [
+        "Offline-First Android Application (Kotlin): The core functionality—including voter processing, ballot generation, and data collection—works completely offline. When intermittent connectivity becomes available, the app syncs securely using a REST API with conflict resolution mechanisms",
+        "Streamlined Voting & Poll Worker Experience: An intuitive tablet interface guides voters and polling officials through every step, minimizing errors and reducing training time",
+        "Integrated Ballot Printing: Each station can generate and print physical ballots on demand, ensuring tamper-resistant, verifiable paper trail, lower risk of ballot shortages, and standardized formatting for faster counting",
+        "Real-Time Aggregation & Analytics: As tablets sync, the central system aggregates results across regions, updates dashboards for election authorities, provides early insights into turnout and preliminary results, and improves situational awareness during the election day",
+        "Scalable National Deployment: The system was engineered to function reliably across remote rural regions, low-connectivity environments, and high-voter-volume stations, making it suitable for widespread, nationwide use"
+      ],
+      "solutionIntro": "We built a robust, offline-first voting platform designed specifically for tablets deployed across Malawi's polling stations:",
+      "solutionOutro": "The platform combines digital efficiency with physical ballot auditability, ensuring both speed and trust in the electoral process.",
+      "benefits": [
+        "Increased efficiency through streamlined and modernized polling workflows",
+        "Greater accessibility, with tablets enabling consistent processes even in rural or low-infrastructure areas",
+        "Faster preliminary results, drastically reducing manual counting delays",
+        "Improved transparency via immediate data sync and dashboard insights for officials",
+        "Resilience in low-connectivity environments thanks to offline-first architecture",
+        "Enhanced accuracy, with reduced human error in both ballot generation and result reporting"
+      ],
+      "benefitsIntro": "The digital voting platform introduced significant improvements to Malawi's election operations:",
+      "benefitsOutro": "The platform now serves as a model for digital election modernization in emerging markets.",
+      "results": [
+        "Successfully supported national elections with a scalable, offline-first digital voting platform",
+        "Enabled rapid analysis of preliminary results, cutting reporting times dramatically",
+        "Delivered strong transparency and auditability through combined digital and printed ballots",
+        "Improved election management across all regions—including remote areas with limited connectivity"
+      ],
+      "resultsIntro": "The project achieved significant milestones:",
+      "problem": ["Paper-based processes", "Remote region logistics", "Manual counting delays", "Limited transparency"],
+      "approach": ["Offline-first mobile app", "Tablet deployment", "Ballot printing", "Real-time sync"],
+      "outcomes": ["National election support", "Rapid result analysis", "Enhanced transparency"],
+      "techStack": ["Kotlin", "Android SDK", "Java", "Spring Boot", "REST API", "Android Tablets", "Mobile Printers"],
+      "tags": ["Kotlin", "Android", "Digital Government", "Civic Tech", "Voting System"],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=800&h=450&auto=format&fit=crop&q=80",
+          "alt": "Malawi Digital Voting Platform"
+        }
+      ],
+      "date": "2025-12-01",
+      "kpis": [
+        { "label": "Coverage", "value": "100%", "description": "Nationwide polling station support" },
+        { "label": "Speed", "value": "↑90%", "description": "Faster result reporting" },
+        { "label": "Reliability", "value": "99.9%", "description": "Offline-first uptime" }
+      ]
+    },
     {
       "id": "tuna-sqs-system-1",
       "title": "Tuna Sales Quotation System (SQS)",
@@ -14,7 +69,7 @@
       "category": "Food Manufacturing",
       "subtitle": "Custom Software Development (Sales System)",
       "heroSubtitle": "A centralized, data-driven platform for smarter pricing, real-time KPI visibility, and full control over the sales quotation process",
-      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=450&auto=format&fit=crop&q=80",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&auto=format&fit=crop&q=80",
       "summary": "Centralized sales visibility, real-time KPI monitoring, and smarter pricing analysis for global tuna sales operations.",
       "clientOverview": "The client is a global market leader in fishing and processing, managing complex international sales operations across multiple tuna species and product lines.",
       "businessChallenge": "The sales quotation process for tuna products was highly fragmented: quotations stored across different files and channels, limited visibility into status, conversion, and expiry, slow response times due to manual data tracking, no consolidated pricing reference across species, and decision-making based on reactive, rather than real-time, insights. The lack of a unified system made it difficult for sales teams to stay agile, maintain competitive pricing, and understand performance across markets. The client needed a centralized, data-driven solution to streamline quotation workflows and provide real-time visibility into KPIs.",
@@ -51,7 +106,7 @@
       "tags": ["custom-development", "SQS", "sales-system", "reporting-analytics", "kpi"],
       "images": [
         {
-          "src": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=450&auto=format&fit=crop&q=80",
+          "src": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&auto=format&fit=crop&q=80",
           "alt": "Tuna Sales Quotation System"
         }
       ],
