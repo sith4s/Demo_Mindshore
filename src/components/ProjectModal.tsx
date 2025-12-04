@@ -466,7 +466,7 @@ export default function ProjectModal({
                   alignItems: 'start'
                 }}>
                   <img 
-                    src="/Demo_Mindshore/images/projects/insurance1.png" 
+                    src="/Demo_Mindshore/images/projects/insurance1.jpg" 
                     alt="Insurance App - Main Screen"
                     style={{
                       width: '100%',
@@ -476,7 +476,7 @@ export default function ProjectModal({
                     }}
                   />
                   <img 
-                    src="/Demo_Mindshore/images/projects/insurance2.png" 
+                    src="/Demo_Mindshore/images/projects/insurance2.jpg" 
                     alt="Insurance App - Coverage Certificate"
                     style={{
                       width: '100%',
@@ -486,7 +486,7 @@ export default function ProjectModal({
                     }}
                   />
                   <img 
-                    src="/Demo_Mindshore/images/projects/insurance3.png" 
+                    src="/Demo_Mindshore/images/projects/insurance3.jpg" 
                     alt="Insurance App - Payment"
                     style={{
                       width: '100%',
