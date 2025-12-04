@@ -215,6 +215,9 @@
       "outcomes": ["AI-powered ASO engine", "Automated optimization", "Cross-store analytics"],
       "techStack": ["Google Cloud Platform", "Vertex AI", "Machine Learning", "Looker", "CI/CD", "Artificial Intelligence"],
       "tags": ["Artificial-Intelligence", "ASO", "Google-Cloud", "Looker", "Data-Analytics", "Machine-Learning"],
+      "screenshots": [
+        { "src": "/Demo_Mindshore/images/projects/ASO Optimization.jpg", "alt": "ASO Optimization Platform Dashboard" }
+      ],
       "images": [],
       "date": "2025-12-01",
       "kpis": []
