@@ -623,6 +623,61 @@ export default function ProjectModal({
             </>
           )}
 
+          {/* UI Screenshots for ERP Modernization UX */}
+          {project.id === 'erp-modernization-ux-2' && (
+            <>
+              <section style={{ marginBottom: '64px' }}>
+                <h2 style={{
+                  fontSize: '12px',
+                  fontWeight: 600,
+                  color: '#F0811C',
+                  textTransform: 'uppercase',
+                  letterSpacing: '2px',
+                  marginBottom: '32px'
+                }}>
+                  Design System Preview
+                </h2>
+                <div style={{ 
+                  display: 'flex', 
+                  flexDirection: 'column',
+                  gap: '24px',
+                  alignItems: 'center'
+                }}>
+                  <img 
+                    src="/Demo_Mindshore/images/projects/ERPModernizationUI1.jpeg" 
+                    alt="ERP Modernization UI Design 1"
+                    style={{
+                      width: '100%',
+                      maxWidth: '800px',
+                      height: 'auto',
+                      borderRadius: '16px',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)'
+                    }}
+                  />
+                  <img 
+                    src="/Demo_Mindshore/images/projects/ERPModernizationUI2.jpeg" 
+                    alt="ERP Modernization UI Design 2"
+                    style={{
+                      width: '100%',
+                      maxWidth: '800px',
+                      height: 'auto',
+                      borderRadius: '16px',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)'
+                    }}
+                  />
+                </div>
+              </section>
+
+              {/* Divider */}
+              <div style={{ 
+                width: '60px', 
+                height: '2px', 
+                background: 'linear-gradient(90deg, #F0811C, #E55197)',
+                marginBottom: '64px'
+              }} />
+            </>
+          )}
+
           {/* App Screenshot for ERP Frontend */}
           {project.id === 'erp-frontend-migration-4' && (
             <>

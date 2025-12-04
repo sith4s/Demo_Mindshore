@@ -296,6 +296,10 @@
       "techStack": ["Figma", "Quasar Framework"],
       "tags": ["UX-Design", "UI-Design", "Design-System", "Figma", "Interaction-Design"],
       "images": [],
+      "screenshots": [
+        { "src": "/Demo_Mindshore/images/projects/ERPModernizationUI1.jpeg", "alt": "ERP Modernization UI Design 1" },
+        { "src": "/Demo_Mindshore/images/projects/ERPModernizationUI2.jpeg", "alt": "ERP Modernization UI Design 2" }
+      ],
       "date": "2025-12-01",
       "kpis": []
     },
