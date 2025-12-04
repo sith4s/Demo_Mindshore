@@ -335,6 +335,12 @@
       "outcomes": ["Launched on App Store & Google Play", "Secure community platform", "Extensible architecture"],
       "techStack": ["Java", "Spring Boot", "React", "React Native", "TypeScript", "JavaScript", "iOS", "Android"],
       "tags": ["Java", "Java-Springboot", "React", "React-Native"],
+      "screenshots": [
+        { "src": "/Demo_Mindshore/images/projects/socialmedia1.jpeg", "alt": "Social Community App - Screen 1" },
+        { "src": "/Demo_Mindshore/images/projects/socialmedia2.jpeg", "alt": "Social Community App - Screen 2" },
+        { "src": "/Demo_Mindshore/images/projects/socialmedia3.jpeg", "alt": "Social Community App - Screen 3" },
+        { "src": "/Demo_Mindshore/images/projects/socialmedia4.jpeg", "alt": "Social Community App - Screen 4" }
+      ],
       "images": [],
       "date": "2025-12-01",
       "kpis": []

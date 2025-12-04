@@ -508,6 +508,79 @@ export default function ProjectModal({
             </>
           )}
 
+          {/* App Screenshots for Social Community */}
+          {project.id === 'social-community-app-3' && (
+            <>
+              <section style={{ marginBottom: '64px' }}>
+                <h2 style={{
+                  fontSize: '12px',
+                  fontWeight: 600,
+                  color: '#F0811C',
+                  textTransform: 'uppercase',
+                  letterSpacing: '2px',
+                  marginBottom: '32px'
+                }}>
+                  Application Screenshots
+                </h2>
+                <div style={{ 
+                  display: 'grid', 
+                  gridTemplateColumns: 'repeat(4, 1fr)', 
+                  gap: '16px',
+                  alignItems: 'start'
+                }}>
+                  <img 
+                    src="/Demo_Mindshore/images/projects/socialmedia1.jpeg" 
+                    alt="Social Community App - Screen 1"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '16px',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)'
+                    }}
+                  />
+                  <img 
+                    src="/Demo_Mindshore/images/projects/socialmedia2.jpeg" 
+                    alt="Social Community App - Screen 2"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '16px',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)'
+                    }}
+                  />
+                  <img 
+                    src="/Demo_Mindshore/images/projects/socialmedia3.jpeg" 
+                    alt="Social Community App - Screen 3"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '16px',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)'
+                    }}
+                  />
+                  <img 
+                    src="/Demo_Mindshore/images/projects/socialmedia4.jpeg" 
+                    alt="Social Community App - Screen 4"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '16px',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)'
+                    }}
+                  />
+                </div>
+              </section>
+
+              {/* Divider */}
+              <div style={{ 
+                width: '60px', 
+                height: '2px', 
+                background: 'linear-gradient(90deg, #F0811C, #E55197)',
+                marginBottom: '64px'
+              }} />
+            </>
+          )}
+
           {/* Technologies Used */}
           <section>
             <h2 style={{
