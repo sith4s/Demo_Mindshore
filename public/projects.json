@@ -110,6 +110,11 @@
           "alt": "Tuna Sales Quotation System"
         }
       ],
+      "screenshots": [
+        { "src": "/Demo_Mindshore/images/projects/SQS1.png", "alt": "SQS Dashboard Overview" },
+        { "src": "/Demo_Mindshore/images/projects/SQS2.png", "alt": "SQS Quotation Management" },
+        { "src": "/Demo_Mindshore/images/projects/SQS3.png", "alt": "SQS Analytics View" }
+      ],
       "date": "2025-12-01",
       "kpis": [
         { "label": "Visibility", "value": "100%", "description": "Full quotation lifecycle visibility" },

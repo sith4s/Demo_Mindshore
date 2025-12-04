@@ -623,6 +623,72 @@ export default function ProjectModal({
             </>
           )}
 
+          {/* Screenshots for SQS Tuna Sales System */}
+          {project.id === 'tuna-sqs-system-1' && (
+            <>
+              <section style={{ marginBottom: '64px' }}>
+                <h2 style={{
+                  fontSize: '12px',
+                  fontWeight: 600,
+                  color: '#F0811C',
+                  textTransform: 'uppercase',
+                  letterSpacing: '2px',
+                  marginBottom: '32px'
+                }}>
+                  System Overview
+                </h2>
+                <div style={{ 
+                  display: 'flex', 
+                  flexDirection: 'column',
+                  gap: '24px',
+                  alignItems: 'center'
+                }}>
+                  <img 
+                    src="/Demo_Mindshore/images/projects/SQS1.png" 
+                    alt="SQS Dashboard Overview"
+                    style={{
+                      width: '100%',
+                      maxWidth: '800px',
+                      height: 'auto',
+                      borderRadius: '16px',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)'
+                    }}
+                  />
+                  <img 
+                    src="/Demo_Mindshore/images/projects/SQS2.png" 
+                    alt="SQS Quotation Management"
+                    style={{
+                      width: '100%',
+                      maxWidth: '800px',
+                      height: 'auto',
+                      borderRadius: '16px',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)'
+                    }}
+                  />
+                  <img 
+                    src="/Demo_Mindshore/images/projects/SQS3.png" 
+                    alt="SQS Analytics View"
+                    style={{
+                      width: '100%',
+                      maxWidth: '800px',
+                      height: 'auto',
+                      borderRadius: '16px',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)'
+                    }}
+                  />
+                </div>
+              </section>
+
+              {/* Divider */}
+              <div style={{ 
+                width: '60px', 
+                height: '2px', 
+                background: 'linear-gradient(90deg, #F0811C, #E55197)',
+                marginBottom: '64px'
+              }} />
+            </>
+          )}
+
           {/* UI Screenshots for ERP Modernization UX */}
           {project.id === 'erp-modernization-ux-2' && (
             <>
