@@ -390,6 +390,9 @@
       "outcomes": ["Production-ready Vue 3 migration", "Custom component library", "Improved code quality and UX"],
       "techStack": ["Vue 3", "Quasar Framework", "JavaScript", "TypeScript"],
       "tags": ["Vue3", "Frontend-Migration", "Software-Modernization", "Web-Development", "Code-Refactoring"],
+      "screenshots": [
+        { "src": "/Demo_Mindshore/images/projects/erpfrontend.jpeg", "alt": "ERP Frontend Modernization Dashboard" }
+      ],
       "images": [],
       "date": "2025-12-01",
       "kpis": []
